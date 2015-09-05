@@ -1,0 +1,123 @@
+.sign_up {
+  margin-left: 1140px;
+  padding: 3px;
+  border: 2px solid gray;
+  font-size: 20px;
+}
+
+#link_setting {
+  width: 100px;
+}
+
+.post_header {
+  padding: 15px;
+}
+
+.post_body {
+  padding: 15px;
+  margin-top: 100px;
+
+}
+
+.post_body > p {
+  width: 400px;
+  border: 1px solid black;
+  word-break:break-all;
+}
+
+.navbar navbar-default navbar-fixed-top {
+  background-color: white;
+}
+
+#nav_setting {
+    margin: 0px;
+    width: 100%;
+}
+
+#nav_setting_right {
+  padding-top: 60px;
+  margin-right: 50px;
+  padding-right: 30px;
+  font-size: 30px;
+}
+
+.index {
+  width: 100%;
+}
+
+.index_header {
+  margin: 0px;
+  padding: 0px;
+}
+
+form_group {
+    padding-left: 70px;
+}
+
+#exampleInputEmail1 , #exampleInputPassword1 {
+  background-color: rgba(255, 255, 255, 0.59);
+  width: 252px;
+}
+
+#link_setting {
+    background-color: rgb(208, 154, 48);
+}
+
+#link_setting, #login_setting {
+  width: 120px;
+  padding: 15px;
+  margin: 2px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#page {
+		margin: 0;
+		position:relative;
+		width: 1200px;
+		font-family:verdana;
+		font-size:12px;
+}
+
+#content {
+		width:100%;
+}
+
+pre {
+	border:3px solid #ccc;
+	padding:5px;
+	font-size:12px;
+	font-family:arial;
+}
+
+.bold {
+  font-weight:bold;
+}
+
+.blue {
+  color:blue;
+}
+
+.red {
+  color:red;
+}
+
+#footer{
+	margin-top:5px;
+	text-align:center;
+	width:100%;
+	height:auto;
+	padding:5px;
+	background-color:#ccc;
+}
+
+#logo,#foot {
+  margin-left: 10px;
+}
+
+.Main_body {
+
+}
