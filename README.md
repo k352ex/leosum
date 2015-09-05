@@ -10,9 +10,7 @@
 
 1. `brew install mysql`
 2. `mysql -u root`
-	```bash
-    mysql> # 이런 컨맨드 라인이 나옵니다
-    ```
+    - `mysql> # 이런 커맨드 라인이 나옵니다`
 3. `CREATE USER 'leosum_test'@'localhost' IDENTIFIED BY 'leosum';` # 유저 생성
 4. `GRANT ALL PRIVILEGES ON * . * TO 'leosum_test'@'localhost';` # 권한 부여
 5. `FLUSH PRIVILEGES;` # 최종 확정
