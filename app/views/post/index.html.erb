@@ -1,1 +1,80 @@
-<h1>Hello world!</h1>
+<nav>
+  <!--상단고정 class : navbar-fixed-top -->
+  <div class="container" id="nav_setting">
+    <!--non-collapse button-->
+    <div class="navbar-header">
+      <a href="/"> <%= image_tag "logo.png", width: 300 , height: 120 %> </a>
+    </div>
+
+    <!--collapse button-->
+    <ul class="nav navbar-nav navbar-right" id="nav_setting_right">
+      <li><a href="/home/issue">ISSUE</a></li>
+      <li><a href="/home/group">GROUP</a></li>
+      <li><a href="/home/artist">ARTIST</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"> </i> <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li>사용자</li>
+            <li><a href="#">메세지</a></li>
+            <li><a href="#">마이페이지</a></li>
+            <li role="separator" class="divider"></li>
+
+            <li>팔로우</li>
+            <li><a href="#">김희천</a></li>
+            <li><a href="#">유목연</a></li>
+            <li role="separator" class="divider"></li>
+
+            <li>그룹</li>
+            <li><a href="#">옥인콜렉티브</a></li>
+            <li><a href="#">INTERNET yami-ichi</a></li>
+            <li><a href="#">서울익스프레스</a></li>
+            <li role="separator" class="divider"></li>
+          </ul>
+      </li>
+      <li>
+        <% if user_signed_in? %>
+            <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+        <% end %>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+        <!--사이드바-->
+            <div>
+                작가명
+            </div>
+            <div>
+                work
+                <ul>
+                    <li>tea</li>
+                    <li>hidden</li>
+                    <li>mokyon</li>
+                    <li>tea</li>
+                    <li>hidden</li>
+                    <li>mokyon</li>
+                </ul>
+            </div>
+            <div>
+                profile
+            </div>
+            <div>
+                reviews
+            </div>
+            
+        </div>
+        <div class="col-md-8">
+        <!--이미지-->
+            <% @post.each do |p| %>
+                <div class="col-md-6">
+                    <a href="/home/detail/<%= p.id %>"> <%= image_tag("#{p.post_image}", alt: " ") %> </a>
+                </div>
+            <% end %>
+        </div>
+    </div><!--row-->
+</div><!--container-->
