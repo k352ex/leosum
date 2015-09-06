@@ -1,16 +1,9 @@
-<<<<<<< HEAD
-<p> <%= link_to "이미지업로드", new_post_path , target: "_new" %> </p>
-
-=======
 <nav>
-  <!--상단고정 class : navbar-fixed-top -->
   <div class="container" id="nav_setting">
-    <!--non-collapse button-->
     <div class="navbar-header">
       <a href="/"> <%= image_tag "logo.png", width: 300 , height: 120 %> </a>
     </div>
 
-    <!--collapse button-->
     <ul class="nav navbar-nav navbar-right" id="nav_setting_right">
       <li><a href="/home/issue">ISSUE</a></li>
       <li><a href="/home/group">GROUP</a></li>
@@ -35,21 +28,12 @@
             <li role="separator" class="divider"></li>
           </ul>
       </li>
-      <li>
-        <% if user_signed_in? %>
-            <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
-        <% end %>
-      </li>
     </ul>
   </div>
 </nav>
 
+<p> <%= link_to "이미지업로드", new_post_path , target: "_new" %> </p>
 
-
-<% if user_signed_in? %>
-  <%= link_to('로그아웃', destroy_user_session_path, :method => :delete) %>
-<% end %>
->>>>>>> 767649bf0edf3bfa13c6c50742317e209197d124
 
 <p>
   <% if user_signed_in? %>
