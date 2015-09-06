@@ -1,5 +1,12 @@
-<% if user_signed_in? %>
-  <%= link_to('로그아웃', destroy_user_session_path, :method => :delete) %>
-<% end %>
+<p> <%= link_to "이미지업로드", new_post_path , target: "_new" %> </p>
 
-<%= link_to "이미지업로드", new_post_path %>
+
+<p>
+  <% if user_signed_in? %>
+    <%= link_to('로그아웃', destroy_user_session_path, :method => :delete) %>
+  <% end %>
+</p>
+
+<% @post.each do |p| %>
+  <%= image_tag(p.image, size: "100x100", alt: "test") %>
+<% end %>

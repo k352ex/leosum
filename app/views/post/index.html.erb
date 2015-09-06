@@ -1,12 +1,9 @@
 <nav>
-  <!--상단고정 class : navbar-fixed-top -->
   <div class="container" id="nav_setting">
-    <!--non-collapse button-->
     <div class="navbar-header">
       <a href="/"> <%= image_tag "logo.png", width: 300 , height: 120 %> </a>
     </div>
 
-    <!--collapse button-->
     <ul class="nav navbar-nav navbar-right" id="nav_setting_right">
       <li><a href="/home/issue">ISSUE</a></li>
       <li><a href="/home/group">GROUP</a></li>
@@ -66,13 +63,13 @@
             <div>
                 reviews
             </div>
-            
+
         </div>
         <div class="col-md-8">
         <!--이미지-->
             <% @post.each do |p| %>
                 <div class="col-md-6">
-                    <a href="/home/detail/<%= p.id %>"> <%= image_tag("#{p.post_image}", alt: " ") %> </a>
+                    <a href="/home/detail/<%= p.id %>"> <%= image_tag("#{p.image}", alt: " ") %> </a>
                 </div>
             <% end %>
         </div>

@@ -1,8 +1,11 @@
 class PostController < ApplicationController
-  def index
 
+  def index
+    @post = Post.all
   end
+
   def create
+
     @post = Post.new
     @post.title  = params[:title]
     @post.artist = params[:artist]
