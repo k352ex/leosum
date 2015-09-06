@@ -1,4 +1,10 @@
-<!-- 사진 뿌려주기  -->
-<% if current_user.signed? %>
-  <%= link_to "로그아웃", destroy_user_session_path %>
+<% if user_signed_in? %>
+  <%= link_to('로그아웃', destroy_user_session_path, :method => :delete) %>
+<% end %>
+
+<%= form_for @post, url: {action: "create"} do |f| %>
+  <%= f.text_field :title %>
+  <%= f.text_area :context, size: "60x12" %>
+  <%= f.file_field :image %>
+  <%= f.submit "제출" %>
 <% end %>
