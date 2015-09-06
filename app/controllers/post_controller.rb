@@ -18,9 +18,15 @@ class PostController < ApplicationController
 		end
   end
 
+  def modify
+
+  end
+  
 	private
 
 	def post_params
 		params.require(:post).permit!
 	end
+
+
 end
