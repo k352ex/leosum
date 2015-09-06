@@ -1,1 +1,4 @@
 <!-- 사진 뿌려주기  -->
+<% if current_user.signed? %>
+  <%= link_to "로그아웃", destroy_user_session_path %>
+<% end %>
