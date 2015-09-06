@@ -15,6 +15,10 @@ gem 'bootstrap-sass', '~> 3.3.5'
 
 gem 'devise'
 
+# 이미지 처리
+gem 'carrierwave'
+gem 'fog'
+
 group :development, :test do
   gem 'quiet_assets'
   gem 'awesome_print'

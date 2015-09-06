@@ -1,29 +1,21 @@
-<h2>Sign up</h2>
+<div class="header" id="main_background">
+  <div class="form" id="main_form">
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <div class="form-group" id="form_group">
+        <%= f.email_field :email, class: "form-control", id: "exampleInputEmail1", placeholder: "이메일", autofocus: true, :required => true %>
+      </div>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+      <div class="form-group" id="form_group">
+        <%= f.password_field :password, class: "form-control", id: "exampleInputPassword1", placeholder: "비밀번호", autocomplete: "off" , :required => true%>
+      </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+      <div class="form-group" id="form_group">
+        <%= f.password_field :password_confirmation, class: "form-control", id: "exampleInputPassword1", placeholder: "비밀번호 재확인" , autocomplete: "off" , :required => true %>
+      </div>
+
+      <div class="section_login_bar">
+          <%= f.submit "회원 가입" , class: "btn btn-theme-dark btn-md"  %>
+      </div>
+    <% end %>
   </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "users/shared/links" %>
+</div>
