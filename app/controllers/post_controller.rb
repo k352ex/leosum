@@ -4,20 +4,23 @@ class PostController < ApplicationController
     @post = Post.all
   end
 
-  def create
-
-    @post = Post.new
-    @post.title  = params[:title]
-    @post.artist = params[:artist]
-    @post.context = params[:context]
-    @post.image  = params[:image]
-    @post.save
-    redirect_to authenticated_root_path
-
-  end
-
   def new
-
+		@post = Post.new
   end
 
+  def create
+    @post = Post.new(post_params)
+    if @post.save
+    	redirect_to authenticated_root_path
+		else
+			flash[:alert] = '실패'
+			render 'new'
+		end
+  end
+
+	private
+
+	def post_params
+		params.require(:post).permit!
+	end
 end
