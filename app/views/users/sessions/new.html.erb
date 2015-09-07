@@ -1,26 +1,55 @@
-<section class="row">
-  <section class="col-md-12">
-  <div class="Main_body">
-    <div class="header">
+<div class="bs-example">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Carousel indicators -->
 
-      <%= image_tag "logo.png" , width: 750, height: 400 , style: "text-align:left; margin-bottom: 100px"%>
+        <!-- Wrapper for carousel items -->
+        <div class="carousel-inner">
+            <div class="item active">
+              <%= image_tag "logo.png" , width: 500, height: 300 %>
 
-      <div class="form" id="main_form">
-        <%= form_for(resource, as: resource_name, url: session_path(resource_name))do |f| %>
-          <div class="form-group" id="form_group">
-            <%= f.email_field :email, class: "form-control", id: "exampleInputEmail1", placeholder: "이메일", autofocus: true, :required => true %>
-          </div>
+                <section class="row">
+                  <section class="col-md-12">
+                    <div class="Main_body">
+                      <div class="header">
+                        <div class="form" id="main_form">
+                          <%= form_for(resource, as: resource_name, url: session_path(resource_name))do |f| %>
+                            <div class="form-group" id="form_group">
+                              <%= f.email_field :email, class: "form-control", id: "exampleInputEmail1", placeholder: "이메일", autofocus: true, :required => true %>
+                            </div>
 
-          <div class="form-group" id="form_group">
-            <%= f.password_field :password, class: "form-control", id: "exampleInputPassword1", placeholder: "비밀번호", autocomplete: "off" , :required => true%>
-          </div>
-          <div class="section_login_bar">
-              <%= link_to "회원 가입", new_user_registration_path , class: "btn btn-theme-dark btn-md" , id: "link_setting" %>
-              <%= f.submit "로그인", class: "btn btn-theme-dark" , id: "login_setting"%>
-          </div>
-        <% end %>
-      </div>
+                            <div class="form-group" id="form_group">
+                              <%= f.password_field :password, class: "form-control", id: "exampleInputPassword1", placeholder: "비밀번호", autocomplete: "off" , :required => true%>
+                            </div>
+                            <div class="section_login_bar">
+                                <%= link_to "회원 가입", new_user_registration_path , class: "btn btn-theme-dark btn-md" , id: "link_setting" %>
+                                <%= f.submit "로그인", class: "btn btn-theme-dark" , id: "login_setting"%>
+                            </div>
+                          <% end %>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </section>
+            </div>
+            <div class="item">
+                <%= image_tag "logo.png", width: 1300, height: 1000 %>
+            </div>
+            <div class="item">
+                <%= image_tag "logo.png" , width: 1300, height: 1000 %>
+            </div>
+        </div>
+        <!-- Carousel controls -->
+        <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+          </span>
+        </a>
+        <a class="carousel-control right" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
     </div>
-  </div>
-  </section>
-</section>
+</div>
