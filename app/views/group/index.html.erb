@@ -48,7 +48,7 @@
   <div class="col-md-7">
     <a href="/group/new"> <div class="make_group" style="text-align:center;" border="1px solid #eee"> + 그룹만들기 </div> </a>
   </div>
-  
+
   <div class="col-md-3"> </div>
 
   <div class="col-md-2"> </div>
@@ -56,6 +56,7 @@
     <% @group.each do |g| %>
       <div class="row">
         <div class="col-md-12">
+            <%= image_tag(g.image, size: "300x300", alt: "test") %>
             <p> <%= g.name %> </p>
             <p> <%= g.content %> </p>
             <p> <%= g.current_member %> / <%= g.max_member %> </p>
