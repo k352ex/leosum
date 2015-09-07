@@ -1,3 +1,4 @@
+# coding: utf-8
 class GroupController < ApplicationController
 
   def index
@@ -5,7 +6,7 @@ class GroupController < ApplicationController
   end
 
   def new
-    group = Group.new
+    @group = Group.new
   end
 
   def create
