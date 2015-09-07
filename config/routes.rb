@@ -4,6 +4,9 @@ Rails.application.routes.draw do
 
   resources :post
   resources :gallery
+  resources :issue
+  resources :group
+  resources :artist
 
   devise_scope :user do
     get "/login" => "users/sessions#new"

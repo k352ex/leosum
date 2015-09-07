@@ -39,15 +39,25 @@
   </div>
 </nav>
 
+<div style="padding:50px"></div>
 
-<div style="padding:30px;"> </div>
+<section class="row" style="text-align:center">
 
-<section class="row">
+    <div class="col-md-2"> </div>
+
+  <div class="col-md-7">
+    <div class="make_group" style="text-align:center;" border="1px solid #eee"> + 그룹만들기 </div>
+  </div>
+
+  <div class="col-md-3">  </div>
+
   <div class="col-md-2"> </div>
   <div class="col-md-8">
-    <% @post.each do |p| %>
-      <a href="/" class="gallery_image"> <%= image_tag(p.image, size: "100x100", alt: "test", class: "gallery_image") %> </a>
-    <% end %>
+    <div class="row">
+      <div class="col-md-3"> </div>
+      <div class="col-md-6"> </div>
+      <div class="col-md-3">  </div>
+    </div>
   </div>
   <div class="col-md-2"> </div>
 </section>

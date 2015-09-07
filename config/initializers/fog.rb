@@ -5,5 +5,5 @@ CarrierWave.configure do |config|
     aws_secret_access_key: '28anB8cZ9Q0UhVisdGacqYWQrWApruS9kTdLUJ/H',                        # required
     region:                'ap-northeast-1'
   }
-  config.fog_directory  = '/leosum'                          # required
+  config.fog_directory  = 'leosum'                          # required
 end

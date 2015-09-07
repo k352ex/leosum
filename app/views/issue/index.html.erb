@@ -38,16 +38,3 @@
     </ul>
   </div>
 </nav>
-
-
-<div style="padding:30px;"> </div>
-
-<section class="row">
-  <div class="col-md-2"> </div>
-  <div class="col-md-8">
-    <% @post.each do |p| %>
-      <a href="/" class="gallery_image"> <%= image_tag(p.image, size: "100x100", alt: "test", class: "gallery_image") %> </a>
-    <% end %>
-  </div>
-  <div class="col-md-2"> </div>
-</section>

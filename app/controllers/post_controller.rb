@@ -18,7 +18,7 @@ class PostController < ApplicationController
     end
   end
 
-  def modify
+  def update
 
   end
 
@@ -27,3 +27,4 @@ class PostController < ApplicationController
 	def post_params
 		params.require(:post).permit!
 	end
+end
