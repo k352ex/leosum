@@ -4,7 +4,8 @@ class CreateGroups < ActiveRecord::Migration
 
       t.string :name
       t.string :content
-
+      t.string :image
+      
       t.integer :current_member
       t.integer :max_member
 
