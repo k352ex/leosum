@@ -23,6 +23,9 @@ gem 'devise'
 gem 'carrierwave'
 gem 'fog'
 
+# D3.js
+gem "d3-rails"
+
 group :development, :test do
   gem 'quiet_assets'
   gem 'awesome_print'

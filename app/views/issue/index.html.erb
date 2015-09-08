@@ -10,31 +10,27 @@
       <li> <%= link_to "Group"  , group_index_path %> </li>
       <li> <%= link_to "Artist" , artist_index_path %> </li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"> </i> <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" id="user_toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">  <i class="glyphicon glyphicon-user">  </i> </a>
             <ul class="dropdown-menu">
               <li>사용자</li>
               <li><a href="#">메세지</a></li>
-              <li><a href="#">마이페이지</a></li>
               <li role="separator" class="divider"></li>
 
               <li>팔로우</li>
               <li><a href="#">김희천</a></li>
-              <li><a href="#">유목연</a></li>
               <li role="separator" class="divider"></li>
 
               <li>그룹</li>
               <li><a href="#">옥인콜렉티브</a></li>
-              <li><a href="#">INTERNET yami-ichi</a></li>
-              <li><a href="#">서울익스프레스</a></li>
               <li role="separator" class="divider"></li>
+              <li> <%= link_to "이미지업로드", new_post_path , target: "_new" %> </li>
+              <li>
+                  <% if user_signed_in? %>
+                    <%= link_to('로그아웃', destroy_user_session_path, :method => :delete) %>
+                  <% end %>
+              </li>
             </ul>
         </li>
-      <li> <%= link_to "이미지업로드", new_post_path , target: "_new" %> </li>
-      <li>
-          <% if user_signed_in? %>
-            <%= link_to('로그아웃', destroy_user_session_path, :method => :delete) %>
-          <% end %>
-    </li>
     </ul>
   </div>
 </nav>

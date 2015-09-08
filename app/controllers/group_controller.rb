@@ -12,7 +12,7 @@ class GroupController < ApplicationController
   def create
     @group = Group.new(group_params)
     if @group.save
-      redirect_to authenticated_root_path
+      redirect_to group_index_path
     else
       flash[:alert] = '실패'
       render 'new'
