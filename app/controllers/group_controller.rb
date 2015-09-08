@@ -19,6 +19,10 @@ class GroupController < ApplicationController
     end
   end
 
+  def update
+
+  end
+
   def group_params
     params.require(:group).permit!
   end
