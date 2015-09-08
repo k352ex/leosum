@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+# 윈도우 환경 세팅
+gem 'tzinfo'
+gem 'tzinfo-data'
+# 여기까지
 
 gem 'rails', '4.2.3'
 gem 'mysql2'
