@@ -26,6 +26,10 @@ gem 'fog'
 # D3.js
 gem "d3-rails"
 
+
+# Credential key
+gem 'dotenv-rails', :groups => [:development, :test]
+
 group :development, :test do
   gem 'quiet_assets'
   gem 'awesome_print'
