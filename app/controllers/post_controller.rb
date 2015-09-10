@@ -10,6 +10,7 @@ class PostController < ApplicationController
 
   def create
     @post = Post.new(post_params)
+    @image = Image.new
     if @post.save
       redirect_to authenticated_root_path
     else

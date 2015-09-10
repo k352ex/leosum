@@ -12,8 +12,11 @@
         <li class="dropdown">
         <a href="#" class="dropdown-toggle" id="user_toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">  <i class="glyphicon glyphicon-user">  </i> </a>
             <ul class="dropdown-menu">
-              <li>사용자</li>
-              <li><a href="#">메세지</a></li>
+              <li> <%= current_user.username %> </li>
+              <% @user.each do |x| if x.id == current_user.id %>
+                <li> <a href="/blog/<%= x.id %>"> 마이페이지 </a></li>
+                <% end %>
+              <% end %>
               <li role="separator" class="divider"></li>
 
               <li>팔로우</li>
@@ -42,7 +45,9 @@
   <div class="col-md-2"> </div>
   <div class="col-md-8">
     <% @post.each do |p| %>
-      <a href="/" class="gallery_image"> <%= image_tag(p.image, size: "100x100", alt: "test", class: "gallery_image") %> </a>
+      <a href="/blog/<%= p.id %>" class="gallery_image">
+        <%= image_tag(p.image, size: "100x100", alt: "test", class: "gallery_image") %>
+      </a>
     <% end %>
   </div>
   <div class="col-md-2"> </div>

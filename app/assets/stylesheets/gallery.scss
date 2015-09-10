@@ -4,9 +4,9 @@
 
 .gallery_image {
     display: inline-block;
-    padding: 1px;
+    background-color: rgba(0, 0, 0, 0.82);
 }
 
-.gallery_image > a:hover {
-    background-color: yellow;
+.gallery_image > :hover {
+    opacity:0.2;
 }

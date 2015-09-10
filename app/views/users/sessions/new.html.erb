@@ -20,8 +20,8 @@
                             <div class="form-group" id="form_group">
                               <%= f.password_field :password, class: "form-control", id: "exampleInputPassword1", placeholder: "비밀번호", autocomplete: "off" , :required => true%>
                             </div>
-                            <div class="section_login_bar">
-                                <%= link_to "회원 가입", new_user_registration_path , class: "btn btn-theme-dark btn-md" , id: "link_setting" %>
+                            <div class="section_login_bar"> 
+                                <%= link_to "회원 가입", register_path , class: "btn btn-theme-dark btn-md" , id: "link_setting" %>
                                 <%= f.submit "로그인", class: "btn btn-theme-dark" , id: "login_setting"%>
                             </div>
                           <% end %>
