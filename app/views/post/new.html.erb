@@ -2,5 +2,6 @@
   <%= f.text_field :title %>
   <%= f.text_area :context, size: "60x12" %>
   <%= f.file_field :image %>
+  <%= hidden_field_tag(:user_id, current_user.id) %>
   <%= f.submit "제출" %>
 <% end %>

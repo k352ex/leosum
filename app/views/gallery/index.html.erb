@@ -45,7 +45,7 @@
   <div class="col-md-2"> </div>
   <div class="col-md-8">
     <% @post.each do |p| %>
-      <a href="/blog/<%= p.id %>" class="gallery_image">
+      <a href="/blog/<%= p.user_id %>" class="gallery_image">
         <%= image_tag(p.image, size: "100x100", alt: "test", class: "gallery_image") %>
       </a>
     <% end %>
