@@ -55,21 +55,24 @@
       </div>
     </nav>
 
+    <div style="padding:50px;"> </div>
 
-    <section class="row">
-      <section class="col-md-4"> </section>
-
-      <section class="col-md-4">
-        <% @post.each do |p| if p.id == params[:id].to_i %>
-          <%= image_tag(p.image, size: "50%", alt: "test", class: "gallery_image") %>
-          <%= p.artist %>
-          <%= p.context %>
-          <%= p.title %>
-          <%= link_to " ", blog_path(p.user_id), class: "glyphicon glyphicon-home" %>
-          <% end %>
+<section class="row">
+  <section class="col-md-2" style="margin-left:50px;">
+    <% @user.each do |u| %>
+      <% if u.id == params[:id].to_i %>
+        <h3> <%= u.username %> </h3>
+        <div style="padding:10px;"> </div>
+        <h5> WORKS </h5>
+        <% @work.each do |w| %>
+          <p> <%= w.title %> </p>
         <% end %>
-      </section>
 
-      <section class="col-md-4"> </section>
-    </section>
-</body>
+        <%= link_to "+" , new_work_path %>
+        <h5> PROFILE </h5>
+        <h5> REVIEW </h5>
+        <p> <%= u.email %> </p>
+      <% end %>
+    <% end %>
+  </section>
+</section>

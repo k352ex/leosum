@@ -4,7 +4,8 @@ class PreviewController < ApplicationController
 
     @post = Post.all
     @user = User.all
-    #
+    @work = Work.all
+
     # @post_id = Post.find(params[:id])
     # @user_id = User.find(params[:user_id])
   end
