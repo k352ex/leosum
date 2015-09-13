@@ -6,6 +6,7 @@ class BlogController < ApplicationController
 
   def show
     @user = User.all
+    @work = Work.all
   end
 
   def profile

@@ -1,8 +1,13 @@
 <div class="bs-example">
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <!-- Carousel indicators -->
 
-        <!-- Wrapper for carousel items -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+        </ol>
+
         <div class="carousel-inner">
             <div class="item active">
               <%= image_tag "logo.png" , width: 500, height: 300 %>
@@ -20,7 +25,7 @@
                             <div class="form-group" id="form_group">
                               <%= f.password_field :password, class: "form-control", id: "exampleInputPassword1", placeholder: "비밀번호", autocomplete: "off" , :required => true%>
                             </div>
-                            <div class="section_login_bar"> 
+                            <div class="section_login_bar">
                                 <%= link_to "회원 가입", register_path , class: "btn btn-theme-dark btn-md" , id: "link_setting" %>
                                 <%= f.submit "로그인", class: "btn btn-theme-dark" , id: "login_setting"%>
                             </div>
@@ -37,19 +42,19 @@
             <div class="item">
                 <%= image_tag "logo.png" , width: 1300, height: 1000 %>
             </div>
+
+            <div class="item">
+                <h1> 이어섬 LEOSUM </h1>
+                <p> 관객 이어섬은 신진 아티스트들에게 웹 전시 플랫폼을 제공합니다.  까다로운 작가 선정의 기준이 없는 ‘이어섬’에서 마음껏 홍보하세요! </p>
+            </div>
         </div>
-        <!-- Carousel controls -->
-        <a class="carousel-control left" href="#myCarousel" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left">
-            <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-                <li data-target="#myCarousel" data-slide-to="2"></li>
-            </ol>
-          </span>
+
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"> </span>
         </a>
+
         <a class="carousel-control right" href="#myCarousel" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="glyphicon glyphicon-chevron-right"> </span>
         </a>
     </div>
 </div>

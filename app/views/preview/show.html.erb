@@ -1,3 +1,75 @@
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+<nav>
+  <div class="container" id="nav_setting">
+    <div class="navbar-header">
+      <a href="/"> <%= image_tag "logo.png", width: 300 , height: 120 %> </a>
+    </div>
+
+    <ul class="nav navbar-nav navbar-right" id="nav_setting_right">
+      <li> <span class="glyphicon glyphicon-search"> </span> </li>
+      <li> <%= link_to "Issue"  , issue_index_path %> </li>
+      <li> <%= link_to "Group"  , group_index_path %> </li>
+      <li> <%= link_to "Artist" , artist_index_path %> </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" id="user_toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">  <i class="glyphicon glyphicon-user">  </i> </a>
+            <ul class="dropdown-menu">
+              <li>사용자</li>
+              <li><a href="#">메세지</a></li>
+              <li role="separator" class="divider"></li>
+
+              <li>팔로우</li>
+              <li><a href="#">김희천</a></li>
+              <li role="separator" class="divider"></li>
+
+              <li>그룹</li>
+              <li><a href="#">옥인콜렉티브</a></li>
+              <li role="separator" class="divider"></li>
+              <li> <%= link_to "이미지업로드", new_post_path , target: "_new" %> </li>
+              <li>
+                  <% if user_signed_in? %>
+                    <%= link_to('로그아웃', destroy_user_session_path, :method => :delete) %>
+                  <% end %>
+              </li>
+            </ul>
+        </li>
+    </ul>
+  </div>
+</nav>
+<section style="padding:50px"> </section>
+
+
+  <a class="left carousel-control" href="/preview/<%= params[:id].to_i - 1 %>" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"> </span>
+  </a>
+
+  <section class="row">
+      <section class="col-md-2"> </section>
+
+      <% @post.each do |p| if p.id == params[:id].to_i %>
+        <section class="col-md-5">
+          <%= image_tag(p.image, size: "740x600", alt: "test", class: "gallery_image") %>
+        </section>
+
+        <section class="col-md-3">
+          <h3> <%= p.artist %>  <span> <%= link_to " ", blog_path(p.user_id), class: "glyphicon glyphicon-home" %> </span> </h3>
+          <h3> <%= p.title %> </h3>
+          <div style="padding:100px;"> </div>
+          <p>  <%= p.context %> </p>
+        </section>
+        <% end %>
+      <% end %>
+
+    <section class="col-md-2">    </section>
+
+    <a class="carousel-control right" href="/preview/<%= params[:id].to_i + 1%>" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"> </span>
+    </a>
+
+</section>
+=======
+>>>>>>> Stashed changes
 <head>
   <style>
     @import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
@@ -73,3 +145,7 @@
       <section class="col-md-4"> </section>
     </section>
 </body>
+<<<<<<< Updated upstream
+=======
+>>>>>>> origin/master
+>>>>>>> Stashed changes

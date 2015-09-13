@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'work/index'
+
   devise_for :users, controllers: { sessions: "users/sessions" }
 
   resources :post
@@ -9,6 +11,12 @@ Rails.application.routes.draw do
   resources :artist
   resources :blog
   resources :preview
+  resources :work
+  
+  # User들의 여러 프로젝트들
+  resources :users do
+    resources :work
+  end
 
 
   devise_scope :user do
