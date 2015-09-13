@@ -12,12 +12,16 @@ Rails.application.routes.draw do
   resources :blog
   resources :preview
   resources :work
-  
+
   # User들의 여러 프로젝트들
   resources :users do
     resources :work
   end
 
+  # Blog 개인 프로필
+  resources :blog do
+    resources :profile
+  end
 
   devise_scope :user do
     # 로그인 경로 지정

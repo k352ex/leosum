@@ -3,6 +3,7 @@ class GroupController < ApplicationController
 
   def index
     @group = Group.all
+    @user = User.all
   end
 
   def new

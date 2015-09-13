@@ -28,7 +28,11 @@
             <li class="dropdown">
             <a href="#" class="dropdown-toggle" id="user_toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">  <%= image_tag "user.png", width: 23 , height: 23 %> </a>
                 <ul class="dropdown-menu">
-                  <li>사용자</li>
+                  <li> <%= current_user.username %> </li>
+                  <% @user.each do |x| if x.id == current_user.id %>
+                    <li styel ="font-family:'notokr-medium';"> <a href="/blog/<%= x.id %>"> 마이페이지 </a></li>
+                    <% end %>
+                  <% end %>
                   <li><a href="#">메세지</a></li>
                   <li role="separator" class="divider"></li>
 
