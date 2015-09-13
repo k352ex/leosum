@@ -65,20 +65,7 @@ ActiveRecord::Schema.define(version: 20150913092619) do
 
   create_table "works", force: :cascade do |t|
     t.string   "title",      limit: 255
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
     t.integer  "user_id",    limit: 4
-=======
->>>>>>> Stashed changes
-<<<<<<< Updated upstream
-=======
-    t.integer  "user_id",    limit: 4
->>>>>>> Stashed changes
-<<<<<<< Updated upstream
-=======
->>>>>>> origin/master
->>>>>>> Stashed changes
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
   end
