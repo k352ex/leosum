@@ -129,11 +129,76 @@ pre {
     background: #2f4357;
     height: 100%;
 }
+.carousel .item{
+
+ width: 1300px;
+ height: 500px;
+ padding: 100px;
+ color: white
+}
+
 
 .carousel .item img{
     width: 62%;
     height: 25%;
     margin: 0;
     padding-left: 10px;
-    padding-bottom: 30px;
+    padding-bottom: 100px;
+
 }
+<<<<<<< Updated upstream
+=======
+.bs-example{
+
+}
+
+// .carousel-indicators > li {
+//   display: block;
+//   height: 16px;
+//   width: 16px;
+//   box-shadow: inset 0 0 0 3px #fff;
+//   margin: 10px;
+// }
+//
+// .carousel-indicators .active {
+//   background-color: #65C2C4;
+//   box-shadow: inset 0 0 0 3px #fff;
+//   width: 16px;
+//   height: 16px;
+//   margin: 10px;
+// }
+
+
+#landing1{
+  background-color: #A77DC2;
+
+
+}
+
+#landing2{
+  background-color: #902D67
+
+}
+
+#landing3{
+  background-color: #3E7970
+  
+}
+#landingtext{
+  color: #0AF0DE
+}
+
+.circle
+{
+width:120px;
+height:120px;
+border-radius:50%;
+
+border-color:#0AF0DE;
+font-size:15px;
+color:#000;
+line-height:125px;
+text-align:center;
+background:#FFF
+}
+>>>>>>> Stashed changes

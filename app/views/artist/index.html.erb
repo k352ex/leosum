@@ -12,12 +12,32 @@
   </style>
 </head>
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+    <ul class="nav navbar-nav navbar-right" id="nav_setting_right">
+      <li> <span class="glyphicon glyphicon-search"> </span> </li>
+      <li> <%= link_to "Issue"  , issue_index_path %> </li>
+      <li> <%= link_to "Group"  , group_index_path %> </li>
+      <li> <%= link_to "Artist" , artist_index_path %> </li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" id="user_toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">  <i class="glyphicon glyphicon-user">  </i> </a>
+            <ul class="dropdown-menu">
+              <li> <%= current_user.user_name %> </li>
+              <li><%= link_to "메세지", root_path %> </a> </li>
+              <li role="separator" class="divider"></li>
+=======
+>>>>>>> Stashed changes
 <body>
     <nav>
       <div class="container" id="nav_setting">
         <div class="navbar-header">
           <a href="/"> <%= image_tag "logo3.png", width: 125 , height: 100 %> </a>
         </div>
+<<<<<<< Updated upstream
+=======
+>>>>>>> 6df1b5adca472b8924e9200e42a46e05e9e2f967
+>>>>>>> Stashed changes
 
         <ul class="nav navbar-nav navbar-right" id="nav_setting_right">
           <li><a href = "/"> <%= image_tag "search.png", width: 18, height: 18 %> </a></li>

@@ -10,8 +10,8 @@
 
         <div class="carousel-inner">
             <div class="item active">
-              <%= image_tag "logo.png" , width: 500, height: 300 %>
-
+              <!-- <%= image_tag "logo.png" , width: 500, height: 300 %> -->
+              <%= image_tag "logo.png" , width: 1300, height: 1000 %>
                 <section class="row">
                   <section class="col-md-12">
                     <div class="Main_body">
@@ -25,6 +25,17 @@
                             <div class="form-group" id="form_group">
                               <%= f.password_field :password, class: "form-control", id: "exampleInputPassword1", placeholder: "비밀번호", autocomplete: "off" , :required => true%>
                             </div>
+<<<<<<< Updated upstream
+=======
+
+                            <div class="section_login_bar">
+
+                                <div><label class="radio-inline">
+                                  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" > 로그인 상태로 두기
+                                </label> 비밀번호 찾기</div>
+
+
+>>>>>>> Stashed changes
                             <div class="section_login_bar">
                                 <%= link_to "회원 가입", register_path , class: "btn btn-theme-dark btn-md" , id: "link_setting" %>
                                 <%= f.submit "로그인", class: "btn btn-theme-dark" , id: "login_setting"%>
@@ -35,7 +46,13 @@
                     </div>
                   </section>
                 </section>
+        </div>
+            <div class="item" id="landing1" >
+              <h1 style="color:#0AF0DE;text-align:center"> <strong>이어섬</strong> <br> LEOSUM </h1><br>
+               <p style="coler:white;text-align:center"> 관객 이어섬은 신진 아티스트들에게 웹 전시 플랫폼을 제공합니다.  까다로운 작가 선정의 기준이 없는 ‘이어섬’에서 마음껏 홍보하세요! </p>
+
             </div>
+<<<<<<< Updated upstream
             <div class="item">
                 <%= image_tag "logo.png", width: 1300, height: 1000 %>
             </div>
@@ -51,6 +68,55 @@
 
         <a class="left carousel-control" href="#myCarousel" data-slide="prev">
             <span class="glyphicon glyphicon-chevron-left"> </span>
+=======
+
+                <div class="item" id="landing2">
+                    <h1 style="color:#0AF0DE;text-align:center"> <strong>Artist</strong></h1><br>
+
+                </div>
+                <div class="item" id="landing3">
+                    <h1> <strong>Public</strong></h1><br>
+                        <div class="col-lg-4">
+                          <div class="circle"> 작가검색 </div>
+                          <p>관심있는 작가를 검색할 수 있습니다.</p>
+                        </div>
+                        <div class="col-lg-4">
+                          <div class="circle"> 최신정보 </div>
+                        <p>마음에 드는 작업과 작가의 정보를 받아볼 수 있습니다.</p>
+                        </div>
+                        <div class="col-lg-4">
+                          <div class="circle"> 네트워크 </div>
+                        <p>전시나 프로그램에 자유롭게 참여할 수 있습니다.</p>
+                        </div>
+                </div>
+        </div>
+        <!-- Carousel controls -->
+        <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
+            </ol>
+          </span>
+            <div class="item">
+                <%= image_tag "logo.png", width: 1300, height: 1000 %>
+            </div>
+            <div class="item">
+                <%= image_tag "logo.png" , width: 1300, height: 1000 %>
+            </div>
+
+            <div class="item">
+                <h1> 이어섬 LEOSUM </h1>
+                <p> 관객 이어섬은 신진 아티스트들에게 웹 전시 플랫폼을 제공합니다.  까다로운 작가 선정의 기준이 없는 ‘이어섬’에서 마음껏 홍보하세요! </p>
+            </div>
+        </div>
+
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"> </span>
+
+>>>>>>> Stashed changes
         </a>
 
         <a class="carousel-control right" href="#myCarousel" data-slide="next">
