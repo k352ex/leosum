@@ -1,0 +1,14 @@
+<section class="row">
+  <section class="col-md-4"> </section>
+
+  <section class="col-md-4">
+    <% @post.each do |p| if p.id == params[:id].to_i %>
+      <%= image_tag(p.image, size: "100x100", alt: "test", class: "gallery_image") %>
+      <%= p.artist %>
+      <%= link_to " ", blog_path(p.user_id), class: "glyphicon glyphicon-home" %> 
+      <% end %>
+    <% end %>
+  </section>
+
+  <section class="col-md-4"> </section>
+</section>

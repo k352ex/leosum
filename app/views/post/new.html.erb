@@ -1,6 +1,8 @@
 <%= form_for @post, url: {action: "create"} do |f| %>
   <%= f.text_field :title %>
   <%= f.text_area :context, size: "60x12" %>
+  <%= f.label "아티스트" %>
+  <%= f.text_field :artist %>
   <%= f.file_field :image %>
   <%= hidden_field_tag(:user_id, current_user.id) %>
   <%= f.submit "제출" %>

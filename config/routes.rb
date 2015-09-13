@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   resources :group
   resources :artist
   resources :blog
+  resources :preview
+
 
   devise_scope :user do
     # 로그인 경로 지정

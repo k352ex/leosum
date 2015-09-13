@@ -1,0 +1,4 @@
+<% @user.each do |u| if u.id == params[:id].to_i %>
+  <%= u.username %>
+<% end %>
+<% end %>
