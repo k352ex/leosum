@@ -12,7 +12,8 @@ Rails.application.routes.draw do
   resources :blog
   resources :preview
   resources :work
-
+  resources :review
+  
   # User들의 여러 프로젝트들
   resources :users do
     resources :work
