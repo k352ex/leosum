@@ -10,3 +10,16 @@
 .gallery_image > :hover {
     opacity:0.2;
 }
+
+#nav_setting {
+  fixed:position;
+  left:0;
+  top:0;
+}
+
+
+#nav_setting_right {
+    padding-top: 40px;
+    margin-right: 50px;
+    padding-right: 30px;
+}
