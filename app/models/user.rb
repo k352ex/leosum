@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
 
   has_many :posts
   has_many :works
+  has_many :reviews
   belongs_to :blog
 
 end

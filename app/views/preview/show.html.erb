@@ -12,53 +12,51 @@
   </style>
 </head>
 
+<nav>
+  <div class="container" id="nav_setting">
+    <div class="navbar-header">
+      <a href="/"> <%= image_tag "logo3.png", width: 125 , height: 100 %> </a>
+    </div>
 
-<body>
-    <nav>
-      <div class="container" id="nav_setting">
-        <div class="navbar-header">
-          <a href="/"> <%= image_tag "logo3.png", width: 125 , height: 100 %> </a>
-        </div>
+    <ul class="nav navbar-nav navbar-right" id="nav_setting_right">
+      <li> <a href ="/"> <%= image_tag "search.png", width: 18, height: 18 %> </a></li>
+<!-- <span class="glyphicon glyphicon-search"> </span> </li> -->
+      <li> <%= link_to "issue"  , issue_index_path %></li>
+      <li> <%= link_to "group"  , group_index_path %></li>
+      <li> <%= link_to "artist" , artist_index_path %></li>
+        <li class="dropdown">
+        <a href="#" class="dropdown-toggle" id="user_toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">  <%= image_tag "user.png", width: 23 , height: 23 %> </a>
+            <ul class="dropdown-menu">
+              <li> <%= current_user.username %> </li>
+              <% @user.each do |x| if x.id == current_user.id %>
+                <li> <a href="/blog/<%= x.id %>"> 마이페이지 </a></li>
+                <% end %>
+              <% end %>
+              <li role="separator" class="divider"></li>
 
-        <ul class="nav navbar-nav navbar-right" id="nav_setting_right">
-          <li> <a href ="/"> <%= image_tag "search.png", width: 18, height: 18 %> </a></li>
-    <!-- <span class="glyphicon glyphicon-search"> </span> </li> -->
-          <li> <%= link_to "issue"  , issue_index_path %></li>
-          <li> <%= link_to "group"  , group_index_path %></li>
-          <li> <%= link_to "artist" , artist_index_path %></li>
-            <li class="dropdown">
-            <a href="#" class="dropdown-toggle" id="user_toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">  <%= image_tag "user.png", width: 23 , height: 23 %> </a>
-                <ul class="dropdown-menu">
-                  <li> <%= current_user.username %> </li>
-                  <% @user.each do |x| if x.id == current_user.id %>
-                    <li> <a href="/blog/<%= x.id %>"> 마이페이지 </a></li>
-                    <% end %>
+              <li role="presentation" class="dropdown-header">팔로우</li>
+              <li><a href="#">김희천</a></li>
+              <li role="separator" class="divider"></li>
+
+              <li role="presentation" class="dropdown-header">그룹</li>
+              <li><a href="#">옥인콜렉티브</a></li>
+              <li role="separator" class="divider"></li>
+              <li> <%= link_to "이미지업로드", new_post_path , target: "_new" %> </li>
+              <li>
+                  <% if user_signed_in? %>
+                    <%= link_to('로그아웃', destroy_user_session_path, :method => :delete) %>
                   <% end %>
-                  <li role="separator" class="divider"></li>
+              </li>
+            </ul>
+        </li>
+    </ul>
+  </div>
+</nav>
 
-                  <li role="presentation" class="dropdown-header">팔로우</li>
-                  <li><a href="#">김희천</a></li>
-                  <li role="separator" class="divider"></li>
-
-                  <li role="presentation" class="dropdown-header">그룹</li>
-                  <li><a href="#">옥인콜렉티브</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li> <%= link_to "이미지업로드", new_post_path , target: "_new" %> </li>
-                  <li>
-                      <% if user_signed_in? %>
-                        <%= link_to('로그아웃', destroy_user_session_path, :method => :delete) %>
-                      <% end %>
-                  </li>
-                </ul>
-            </li>
-        </ul>
-      </div>
-    </nav>
-
-    <div style="padding:50px;"> </div>
+<div style="padding:50px;"> </div>
 
 <section class="row">
-  <section class="col-md-2" style="margin-left:50px;">
+  <section class="col-md-2">
     <% @user.each do |u| %>
       <% if u.id == params[:id].to_i %>
         <h3> <%= u.username %> </h3>
@@ -67,7 +65,6 @@
         <% @work.each do |w| %>
           <p> <%= w.title %> </p>
         <% end %>
-
         <%= link_to "+" , new_work_path %>
         <h5> PROFILE </h5>
         <h5> REVIEW </h5>
@@ -75,4 +72,18 @@
       <% end %>
     <% end %>
   </section>
+
+  <% @post.each do |p| if p.id == params[:id].to_i %>
+    <section class="col-md-5">
+      <%= image_tag(p.image, size: "540x500", alt: "test", class: "gallery_image") %>
+    </section>
+
+    <section class="col-md-5">
+      <h3> <%= p.artist %>  <span> <%= link_to " ", blog_path(p.user_id), class: "glyphicon glyphicon-home" %> </span> </h3>
+      <h3> <%= p.title %> </h3>
+      <div style="padding:100px;"> </div>
+      <p>  <%= p.context %> </p>
+    </section>
+    <% end %>
+  <% end %>
 </section>

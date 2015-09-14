@@ -3,4 +3,12 @@ class ReviewController < ApplicationController
 
   end
 
+  def new
+
+  end
+
+  def create
+    @review = Review.new()
+    
+  end
 end
