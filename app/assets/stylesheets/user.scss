@@ -129,6 +129,11 @@ pre {
     background: #2f4357;
     height: 100%;
 }
+
+.carousel-inner {
+  // width: 100%;
+  height: 100%;
+}
 .carousel .item{
 
  width: 1300px;
@@ -146,24 +151,32 @@ pre {
 
 }
 
-#landing1{
+#Main_landing {
+  // height: 1024px;
+}
+
+#landing1 {
   background-color: #A77DC2;
-
-
+  width: 100%;
+  height: 100%;
 }
 
 #landing2{
-  background-color: #902D67
-
+  background-color: #902D67;
+  width: 100%;
+  height: 100%;
 }
 
 #landing3{
-  background-color: #3E7970
+  background-color: #3E7970;
+  width: 100%;
+  height: 100%;
 }
 
 #landingtext{
-  color: #0AF0DE
+  color: #0AF0DE;
 }
+
 
 .circle {
   width:120px;

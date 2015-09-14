@@ -1,82 +1,85 @@
-<div class="bs-example">
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+<div class="container">
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-            <li data-target="#myCarousel" data-slide-to="3"></li>
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+          <li data-target="#myCarousel" data-slide-to="3"></li>
         </ol>
 
         <div class="carousel-inner">
-            <div class="item active">
-              <div class="item">
-                <section class="row">
-                  <section class="col-md-12">
-                    <div class="Main_body">
-                      <div class="header">
-                        <div class="form" id="main_form">
-                          <%= form_for(resource, as: resource_name, url: session_path(resource_name))do |f| %>
-                            <div class="form-group" id="form_group">
-                              <%= f.email_field :email, class: "form-control", id: "exampleInputEmail1", placeholder: "이메일", autofocus: true, :required => true %>
-                            </div>
+          <div class="item active"  id="Main_landing">
+            <div class="item">
+              <div class="form-group">
+                <%= form_for(resource, as: resource_name, url: session_path(resource_name))do |f| %>
+                  <div class="form-group" id="form_group">
+                    <%= f.email_field :email, class: "form-control", id: "exampleInputEmail1", placeholder: "이메일", autofocus: true, :required => true %>
+                  </div>
 
-                            <div class="form-group" id="form_group">
-                              <%= f.password_field :password, class: "form-control", id: "exampleInputPassword1", placeholder: "비밀번호", autocomplete: "off" , :required => true%>
-                            </div>
+                  <div class="form-group" id="form_group">
+                    <%= f.password_field :password, class: "form-control", id: "exampleInputPassword1", placeholder: "비밀번호", autocomplete: "off" , :required => true%>
+                  </div>
 
-                            <div class="section_login_bar">
-
-                                <div><label class="radio-inline">
-                                  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" > 로그인 상태로 두기
-                                </label> 비밀번호 찾기</div>
-
-                              <div class="section_login_bar">
-                                  <%= link_to "회원 가입", register_path , class: "btn btn-theme-dark btn-md" , id: "link_setting" %>
-                                  <%= f.submit "로그인", class: "btn btn-theme-dark" , id: "login_setting"%>
-                              </div>
-                            </div>
-                          <% end %>
-                        </div>
-                      </div>
+                  <div class="section_login_bar">
+                    <div>
+                      <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" > 로그인 상태로 두기
+                      </label>
+                      <span> 비밀번호 찾기 </span>
                     </div>
-                  </section>
-                </section>
-              </div>
+                  </div>
+
+                  <div class="section_login_bar">
+                    <%= link_to "회원 가입", register_path , class: "btn btn-theme-dark btn-md" , id: "link_setting" %>
+                    <%= f.submit "로그인", class: "btn btn-theme-dark" , id: "login_setting"%>
+                  </div>
+                </div>
+              <% end %>
             </div>
-
-          <div class="item" id="landing1">
-            <h1 style="color:#0AF0DE;text-align:center"> <strong>이어섬</strong> <br> LEOSUM </h1><br>
-             <p style="coler:white;text-align:center"> 관객 이어섬은 신진 아티스트들에게 웹 전시 플랫폼을 제공합니다.  까다로운 작가 선정의 기준이 없는 ‘이어섬’에서 마음껏 홍보하세요! </p>
           </div>
 
-          <div class="item" id="landing2">
-              <h1 style="color:#0AF0DE;text-align:center"> <strong>Artist</strong></h1><br>
-          </div>
+      <div class="item" id="landing1">
+        <h1 style="color:#0AF0DE;text-align:center;font-size: 50px;">
+          <h2>
+            <strong id="landingtext"> 이어섬 </strong>
+          </h2>
+          <h3 id="landingtext"> LEOSUM </h3>
+        </h1>
+         <p style="coler:white;text-align:center;font-size: 40px;"> 관객 이어섬은 신진 아티스트들에게 웹 전시 플랫폼을 제공합니다.  <br/> 까다로운 작가 선정의 기준이 없는 ‘이어섬’에서 마음껏 홍보하세요! </p>
+      </div>
 
-          <div class="item" id="landing3">
-              <h1> <strong>Public</strong></h1><br>
-                  <div class="col-lg-4">
-                    <div class="circle"> 작가검색 </div>
-                    <p>관심있는 작가를 검색할 수 있습니다.</p>
-                  </div>
-                  <div class="col-lg-4">
-                    <div class="circle"> 최신정보 </div>
-                  <p>마음에 드는 작업과 작가의 정보를 받아볼 수 있습니다.</p>
-                  </div>
-                  <div class="col-lg-4">
-                    <div class="circle"> 네트워크 </div>
-                  <p>전시나 프로그램에 자유롭게 참여할 수 있습니다.</p>
-                  </div>
-          </div>
+      <div class="item" id="landing2">
+          <h1 style="color:#0AF0DE;text-align:center"> <strong>Artist</strong></h1><br>
+      </div>
 
-          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-              <span class="glyphicon glyphicon-chevron-left"> </span>
-          </a>
+      <div class="item" id="landing3">
+        <h1>
+          <p> <strong>Public</strong> </p>
+        </h1>
 
-          <a class="right carousel-control" href="#myCarousel" data-slide="next">
-              <span class="glyphicon glyphicon-chevron-right"> </span>
-          </a>
-
+        <div class="col-lg-4">
+          <div class="circle"> 작가검색 </div>
+          <p>관심있는 작가를 검색할 수 있습니다.</p>
         </div>
+
+        <div class="col-lg-4">
+          <div class="circle"> 최신정보 </div>
+          <p>마음에 드는 작업과 작가의 정보를 받아볼 수 있습니다.</p>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="circle"> 네트워크 </div>
+          <p>전시나 프로그램에 자유롭게 참여할 수 있습니다.</p>
+        </div>
+      </div>
+
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"> </span>
+      </a>
+
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"> </span>
+      </a>
+      </div>
     </div>
 </div>
