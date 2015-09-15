@@ -53,9 +53,10 @@
   </div>
 </nav>
 
-<div style="padding:50px;"> </div>
+<div style="padding:80px;"> </div>
 
 <section class="row">
+  <section class ="col-md-1"></section>
   <section class="col-md-2">
     <% @user.each do |u| %>
       <% if u.id == params[:id].to_i %>
@@ -78,7 +79,7 @@
       <%= image_tag(p.image, size: "540x500", alt: "test", class: "gallery_image") %>
     </section>
 
-    <section class="col-md-5">
+    <section class="col-md-4">
       <h3> <%= p.artist %>  <span> <%= link_to " ", blog_path(p.user_id), class: "glyphicon glyphicon-home" %> </span> </h3>
       <h3> <%= p.title %> </h3>
       <div style="padding:100px;"> </div>
