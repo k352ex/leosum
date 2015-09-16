@@ -1,5 +1,9 @@
 <div style="padding:80px;"> </div>
 
+<% if user_signed_in? %>
+  <%= link_to('로그아웃', destroy_user_session_path, :method => :delete) %>
+<% end %>
+
 <section class="row">
       <div class="col-md-2"> </div>
       <div class="col-md-8">

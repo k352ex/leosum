@@ -10,28 +10,30 @@
         <div class="carousel-inner">
           <div class="item active"  id="Main_landing">
             <div class="item">
-              <div class="form-group">
-                <%= form_for(resource, as: resource_name, url: session_path(resource_name))do |f| %>
-                  <div class="form-group" id="form_group">
-                    <%= f.email_field :email, class: "form-control", id: "exampleInputEmail1", placeholder: "이메일", autofocus: true, :required => true %>
-                  </div>
-
-                  <div class="form-group" id="form_group">
-                    <%= f.password_field :password, class: "form-control", id: "exampleInputPassword1", placeholder: "비밀번호", autocomplete: "off" , :required => true%>
-                  </div>
-
-                  <div class="section_login_bar">
-                    <div>
-                      <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" > 로그인 상태로 두기
-                      </label>
-                      <span> 비밀번호 찾기 </span>
+              <div class="login_form">
+                <div class="form-group" id="landing_form">
+                  <%= form_for(resource, as: resource_name, url: session_path(resource_name))do |f| %>
+                    <div class="form-group" id="form_group">
+                      <%= f.email_field :email, class: "form-control", placeholder: "이메일", autofocus: true, :required => true %>
                     </div>
-                  </div>
 
-                  <div class="section_login_bar">
-                    <%= link_to "회원 가입", register_path , class: "btn btn-theme-dark btn-md" , id: "link_setting" %>
-                    <%= f.submit "로그인", class: "btn btn-theme-dark" , id: "login_setting"%>
+                    <div class="form-group" id="form_group">
+                      <%= f.password_field :password, class: "form-control", placeholder: "비밀번호", autocomplete: "off" , :required => true%>
+                    </div>
+
+                    <div class="section_login_bar">
+                      <div>
+                        <label class="radio-inline">
+                          <input type="radio" name="inlineRadioOptions" id="inlineRadio1" > 로그인 상태 유지
+                        </label>
+                        <span style="float:right;"> 비밀번호 찾기 </span>
+                      </div>
+                    </div>
+
+                    <div class="section_login_bar">
+                      <%= link_to "회원 가입", register_path , class: "btn btn-theme-dark btn-md" , id: "register_link" %>
+                      <%= f.submit "로그인", class: "btn btn-theme-dark" , id: "login_link"%>
+                    </div>
                   </div>
                 </div>
               <% end %>
@@ -39,21 +41,40 @@
           </div>
 
       <div class="item" id="landing1">
-        <h1 style="color:#0AF0DE;text-align:center;font-size: 50px;">
-          <h2>
-            <strong id="landingtext"> 이어섬 </strong>
-          </h2>
-          <h3 id="landingtext"> LEOSUM </h3>
-        </h1>
-         <p style="coler:white;text-align:center;font-size: 40px;"> 관객 이어섬은 신진 아티스트들에게 웹 전시 플랫폼을 제공합니다.  <br/> 까다로운 작가 선정의 기준이 없는 ‘이어섬’에서 마음껏 홍보하세요! </p>
+        <div class="landing1">
+          <h1> 이어섬 </h1>
+          <h1> IEOSUM </h1>
+        </div>
+          <div class="padding-50"> </div>
+        <div class="landing1_intro">
+          <p> 관객 이어섬은 신진 아티스트들에게 웹 전시 플랫폼을 제공합니다.  </p>
+          <p> 까다로운 작가 선정의 기준이 없는 ‘이어섬’에서 마음껏 홍보하세요! </p>
+        </div>
       </div>
 
       <div class="item" id="landing2">
-          <h1 style="color:#0AF0DE;text-align:center"> <strong>Artist</strong></h1><br>
+        <div class="landing2">
+          <h1> Artist</h1>
+        </div>
+        <div class="landing2_circle">
+          <div id="landing2_circle">
+            <h2> 포트폴리오 </h2>
+          </div>
+          <div id="landing2_circle">
+            <h2> 전시 </h2>
+          </div>
+          <div id="landing2_circle">
+            <h2> 기록 </h2>
+          </div>
+          <div id="landing2_circle">
+            <h2> 네트워크 </h2>
+          </div>
+        </div>
+
       </div>
 
       <div class="item" id="landing3">
-        <h1>
+        <h1 style="margin:0px;">
           <p> <strong>Public</strong> </p>
         </h1>
         <div class="row" style="text-align:center">
