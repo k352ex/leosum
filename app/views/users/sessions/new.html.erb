@@ -11,6 +11,7 @@
           <div class="item active"  id="Main_landing">
             <div class="item">
               <div class="login_form">
+                <%= image_tag "logo.png" , width: 700, height: 400, class: "logo"%>
                 <div class="form-group" id="landing_form">
                   <%= form_for(resource, as: resource_name, url: session_path(resource_name))do |f| %>
                     <div class="form-group" id="form_group">
@@ -21,7 +22,7 @@
                       <%= f.password_field :password, class: "form-control", placeholder: "비밀번호", autocomplete: "off" , :required => true%>
                     </div>
 
-                    <div class="section_login_bar">
+                    <div class="login_option">
                       <div>
                         <label class="radio-inline">
                           <input type="radio" name="inlineRadioOptions" id="inlineRadio1" > 로그인 상태 유지
@@ -30,7 +31,7 @@
                       </div>
                     </div>
 
-                    <div class="section_login_bar">
+                    <div class="login_button">
                       <%= link_to "회원 가입", register_path , class: "btn btn-theme-dark btn-md" , id: "register_link" %>
                       <%= f.submit "로그인", class: "btn btn-theme-dark" , id: "login_link"%>
                     </div>

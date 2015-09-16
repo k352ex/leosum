@@ -54,15 +54,6 @@ form_group {
     padding-left: 70px;
 }
 
-#link_setting {
-    background-color: rgb(208, 154, 48);
-}
-
-#link_setting, #login_setting {
-  width: 120px;
-  padding: 15px;
-  margin: 2px;
-}
 
 * {
   margin: 0;
@@ -138,16 +129,9 @@ pre {
 }
 
 .carousel .item img{
-    width: 62%;
-    height: 25%;
-    margin: 0;
-    padding-left: 10px;
+    margin:0 auto;
+    margin-left: -430px;
     padding-bottom: 100px;
-
-}
-
-#Main_landing {
-  // height: 1024px;
 }
 
 // 랜딩페이지 1
@@ -250,7 +234,10 @@ pre {
 .login_form {
   width: 300px;
   margin: 0 auto;
-  padding-top: 300px;
+}
+
+.login_button > a {
+  color: white;
 }
 
 #login_link , #register_link {
