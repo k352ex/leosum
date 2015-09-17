@@ -1,4 +1,6 @@
-<div style="width:25%; position:relative; left: 35%;">
+<div class="padding-80"> </div>
+
+<div style="width:500px; margin:0 auto; position:relative;">
   <%= form_for @group , url: {action: "create"} , role: "form", class:"form-group" do |f| %>
     <p> <%= f.text_field :name, :placeholder => "그룹명" , class: "form-control" %> </p>
     <p> <%= f.text_area :content, size: "60x12" , :placeholder => "내용" , class:"form-control"%> </p>

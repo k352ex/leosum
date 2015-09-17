@@ -1,9 +1,13 @@
-<%= form_for @work, url: {action: "create"} do |w| %>
-  <p>
-    <%= w.label "타이틀" %>
-    <%= w.text_field :title %>
-    <%= hidden_field_tag(:user_id, current_user.id) %>
-  </p>
+<div class="new_work">
+  <%= form_for @work, url: {action: "create"} do |w| %>
+    <p>
+      <%= w.label "타이틀" %>
+      <%= w.text_field :title , class: "form-control"  %>
+      <%= w.label "작업내용" %>
+      <%= w.text_field :content, class: "form-control" %>
+      <%= hidden_field_tag(:user_id, current_user.id) %>
+    </p>
 
-  <%= w.submit "제출" %>
-<% end %>
+    <%= w.submit "제출" , class: "form-control" , id: "work_submit"%>
+  <% end %>
+</div>

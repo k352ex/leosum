@@ -172,6 +172,7 @@ pre {
   padding-top: 100px;
   padding-bottom: 20px;
   border-bottom : 2px solid #0AF0DE;
+  margin-bottom: 30px;
 }
 
 .landing2 > h1 {
@@ -182,21 +183,43 @@ pre {
 }
 
 .landing2_circle {
-  width: 650px;
+  width: 800px;
   margin: 0 auto;
-  margin-top: 100px;
-}
-
-#landing2_circle > h2 {
-  width: 200px;
-  padding: 40px;
+  padding-top: 50px;
   text-align: center;
-  display: inline;
-  border-radius: 50px;
 }
 
-#landing2_circle {
-  display: inline;
+.landing2_introbox {
+    width: 800px;
+    margin: 0 auto;
+    display: inline;
+}
+
+.landing2_intro {
+    width: 150px;
+    display: inline;
+}
+
+.landing2_intro > p {
+    width: 150px;
+    display: inline;
+}
+
+.circle_box {
+  width: 120px;
+  height: 120px;
+  background-color: white;
+  text-align: center;
+  margin: 30px;
+  border-radius: 50%;
+  display: inline-block;
+  // border : 4px double #0AF0DE;
+}
+
+.circle_box > p {
+  font-size: 20px;
+  line-height: 125px;
+  color:#902D67;
 }
 
 #landing2 {
@@ -205,12 +228,54 @@ pre {
   height: 100%;
 }
 
-#landing3{
+#landing2_row {
+  width: 800px;
+  margin:0 auto;
+  text-align: center;
+}
+
+
+#landing2_circle {
+  width: 200px;
+  margin-top: 10px;
+  text-align:center;
+}
+
+#landing2_circle > p {
+  width: 200px;
+}
+
+.landing3 {
+  width: 800px;
+  margin: 0 auto;
+  padding-top: 100px;
+  padding-bottom: 20px;
+  border-bottom : 2px solid #0AF0DE;
+  margin-bottom: 30px;
+}
+
+.landing3 > h1 {
+  color:#0AF0DE;
+  text-align:center;
+  font-size: 55px;
+  margin:0px;
+}
+#landing3 {
   background-color: #3E7970;
   width: 100%;
   height: 100%;
 }
 
+#landing3_row {
+  width: 800px;
+  margin:0 auto;
+  text-align: center;
+}
+
+#landing3_circle {
+  width: 200px;
+  margin: 30px;
+}
 #landingtext{
   color: #0AF0DE;
 }
@@ -220,13 +285,18 @@ pre {
   width:120px;
   height:120px;
   border-radius:50%;
-
+  margin: 0 auto;
+  margin-bottom: 20px;
   border-color:#0AF0DE;
-  font-size:15px;
   color:#000;
   line-height:125px;
   text-align:center;
   background:#FFF
+}
+
+.circle > p {
+    color: #3E7970;
+    font-size: 20px;
 }
 
 // 로그인 폼

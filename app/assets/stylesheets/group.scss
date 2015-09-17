@@ -3,11 +3,17 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .make_group {
+  width: 700px;
   border: 2px solid #eee;
   border-radius: 20px;
   background-color: #929292;
   font-size: 20px;
   color: white;
   padding:  15px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
 
+.group_new {
+  text-decoration:none;
 }

@@ -6,6 +6,7 @@ class WorkController < ApplicationController
   # Work 생성페이지
   def new
     @work = Work.new
+    @user = User.all
   end
 
   # Work 생성

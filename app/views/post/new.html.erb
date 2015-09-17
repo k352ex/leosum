@@ -6,8 +6,10 @@
     <%= f.text_area :context, size: "25x4" , class: "form-control" %>
     <%= f.label "아티스트" %>
     <%= f.text_field :artist , class: "form-control" %>
+    <%= f.label "첨부파일" %>
     <%= f.file_field :image , class: "form-control" %>
     <%= hidden_field_tag(:user_id, current_user.id) %>
+    <div class="padding-10"> </div>
     <%= f.submit "제출" , class: "form-control" %>
   <% end %>
 </div>
