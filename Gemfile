@@ -5,6 +5,9 @@ gem 'tzinfo'
 gem 'tzinfo-data'
 # 여기까지
 
+# wordle gem
+gem 'jqcloud-rails'
+
 gem 'rails', '4.2.3'
 gem 'mysql2'
 gem 'uglifier', '>= 1.3.0'
