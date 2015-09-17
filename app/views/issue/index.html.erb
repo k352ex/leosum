@@ -1,10 +1,18 @@
+<div style="padding:50px;"> </div>
+
   <!-- 전제 넓이는 10 -->
   <div class="row">
+    <div class="col-xs-12 col-md-10 col-md-offset-1"><h1>&nbsp;이슈 제목</h1></div>
     <div class="col-xs-12 col-md-10 col-md-offset-1">
       <!-- 썸네일 표시 -->
       <% @post.each do |p| %>
         <div class="col-xs-3 col-md-1">
-          <a href="/home/detail/<%= p.id %>" class="thumbnail"> <%= image_tag("#{p.image}", alt: " ") %> </a>
+          <div style="background-color: #ff00ff; height: 100px; width: 100px;   position: absolute; top: 50%; left: 50%;">
+            <div class="absolute_pos"><h4 style="color: #ffffff;"><%= p.artist %></h4></div>
+            <div class="img_thumbnail absolute_pos">
+              <a href="/home/detail/<%= p.id %>"> <%= link_to image_tag(p.image, size: "100x100") , preview_path(p.id) %> </a>
+            </div>
+          </div>
         </div>
       <% end %>
     </div>
