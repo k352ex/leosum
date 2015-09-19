@@ -22,7 +22,7 @@ class GroupController < ApplicationController
   end
 
   def update
-
+    
   end
 
   def group_params

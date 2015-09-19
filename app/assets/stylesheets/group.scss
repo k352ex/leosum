@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .make_group {
-  width: 700px;
+  width: 800px;
   border: 2px solid #eee;
   border-radius: 20px;
   background-color: #929292;
@@ -14,6 +14,62 @@
   margin-top: 100px;
 }
 
+// 그룹 생성 폼
+.new_group > input {
+  margin: 5px;
+}
+
 .group_new {
   text-decoration:none;
+}
+
+.group_show {
+  width: 800px;
+  height: 250px;
+  margin: 0 auto;
+  margin-top: 30px;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.group_image {
+  // margin: 10px;
+  width: 200px;
+  display: inline;
+  float: left;
+}
+
+.group_info {
+  width: 800px;
+  height: 250px;
+  // margin: 10px;
+  display: inline-block;
+}
+
+.group_info > h1 {
+  margin-bottom: 30px;
+}
+
+.group_info > h1 , p{
+  // display: inline;
+  width: 200px;
+}
+
+.group_info > .btn-default {
+  float: right;
+}
+
+.info_head {
+  width: 600px;
+  float: right;
+  margin-top: 10px;
+}
+
+.info_head > h1 , p {
+  display: inline;
+}
+
+.info_head > p {
+  width: 100px;
+  float: right;
 }

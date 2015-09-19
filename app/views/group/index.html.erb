@@ -7,12 +7,29 @@
 </a>
 
 <% @group.each do |g| %>
-  <div class="row">
-    <div class="col-md-12" style="display:inline">
-        <%= image_tag(g.image, size: "300x300", alt: "test", class: "gallery_img") %>
-        <%= g.name %>
-        <%= g.content %>
-        <%= g.current_member %> / <%= g.max_member %>
-    </div>
-  </div>
+  <div class="group_show">
+          <% if g.image.nil? %>
+            <p> <%= g.name %> </p>
+            <p> <%= g.content %> </p>
+            <p> <%= g.current_member %> / <%= g.max_member %> </p>
+          <% else %>
+              <div class="group_info">
+
+                <div class="group_image">
+                  <%= image_tag(g.image, size: "200x200", alt: "test", class: "gallery_img") %>
+                </div>
+
+                <div class="info_head">
+                  <h1> <%= g.name %> </h1>
+                  <p>  <%= g.current_member %> / <%= g.max_member %> 명 </p>
+                </div>
+
+                <div class="info_body">
+                  <p>  <%= g.content %> </p>
+                  <button type="button" class="btn btn-default"> 가입하기 </button>
+                </div>
+            </div>
+
+          <% end %>
+   </div>
 <% end %>
