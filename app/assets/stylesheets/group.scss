@@ -73,3 +73,47 @@
   width: 100px;
   float: right;
 }
+
+#current-num{
+  width: 80px;
+  display: inline-block;
+  // margin-left: px;
+}
+
+#max-num{
+    width: 80px;
+    display: inline-block;
+  //  margin-left: 320px;
+}
+
+
+
+.form-control{
+  padding: 20px 15px;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+
+#register-id{
+  height: 40px;
+  width: 80px;
+  background-color: #65C2C4;
+  border-radius: 5px;
+  color: white;
+  margin-top: 20px;
+  margin-left: 320px;
+
+}
+
+#file-upload{
+ background-color:  #65C2C4;
+ opacity: 0.6;
+
+}
+
+
+.numbox{
+  float:right;
+  // display: inline-block;
+}

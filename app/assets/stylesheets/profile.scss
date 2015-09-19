@@ -1,3 +1,16 @@
 // Place all the styles related to the profile controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.profile_info {
+  width: 800px;
+  display: inline-block;
+}
+
+.profile_info > p {
+  display: block;
+  
+}
+.left_nav {
+  display: inline-block;
+}

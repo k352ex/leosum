@@ -6,13 +6,14 @@
         <h3> <%= u.username %> </h3>
         <div style="padding:10px;"> </div>
         <h5> WORKS </h5>
-        <% @work.each do |w| %>
-          <p style="padding-left: 10px"> <%= w.title %> </p>
+        <% @work.each do |w| if w.user_id == params[:id].to_i %>
+          <p style="padding-left:10px; display:block;"> <%= w.title %> </p>
+          <% end %>
         <% end %>
-
         <div style="padding-left: 10px;"> <%= link_to "+" , new_work_path %> </div>
-        <h5> <%= link_to "PROFILE", blog_profile_index_path(params[:id]) %> </h5>
+        <h5> <%= link_to "PROFILE", profile_path(u) %> </h5>
         <h5> REVIEW </h5>
+
         <p> <%= u.email %> </p>
       <% end %>
     <% end %>
