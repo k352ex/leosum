@@ -1,16 +1,16 @@
 <div style="width: 500px;margin: 0 auto; padding-top: 150px;">
   <%= form_for :profile, url: profile_path(@profile), method: :patch do |f| %>
     <p>
-      <%= f.label :content %><br>
-      <%= f.text_field :content %>
+      <%= f.text_area :content, size: "25x10", class: "form-control", placeholder:"내용"%>
       <%= hidden_field_tag(:user_id, current_user.id) %>
     </p>
 
     <p>
-      <%= f.submit %>
+      <%= f.submit "수정", class: "form-control" %>
     </p>
 
   <% end %>
-
-  <%= link_to 'Back', profile_path %>
+  <p style = "text-align:center;">
+    <%= link_to '취소', profile_path, class: "form-control" %>
+  </p>
 </div>

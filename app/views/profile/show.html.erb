@@ -1,38 +1,51 @@
 <div style="padding:80px;"> </div>
 <div class="profile">
-  <div class="left_nav">
-      <% @user.each do |u| %>
-        <% @user_id = u.id %>
-        <% if u.id == params[:id].to_i %>
-          <h3> <%= u.username %> </h3>
-          <div style="padding:10px;"> </div>
-          <h5> WORKS </h5>
+  <div class ="row">
+    <div class = "col-md-3">
+      <div class="left_nav" style = "padding-left:50px;">
+          <% @user.each do |u| %>
+            <% @user_id = u.id %>
+            <% if u.id == params[:id].to_i %>
+              <h3 style = "font-family:notokr-medium;"> <%= u.username %> </h3>
 
-          <% @work.reverse.each do |w| if w.user_id == params[:id].to_i %>
-            <p style="padding-left:10px; display:block;"> <%= w.title %> </p>
+              <div style="padding:15px;">
+                  <h5 style = "font-family:notokr-bold;"> works </h5>
+
+                  <% @work.reverse.each do |w| if w.user_id == params[:id].to_i %>
+                  <div style="padding-left: 10px; font-family:notokr-light; padding-bottom: 7px;"> &nbsp; <%= w.title %> <br></div>
+                    <% end %>
+                  <% end %>
+
+                  <div style="padding-left: 17px;"> <%= link_to image_tag("add.png", size: "12x12", alt: "add") , new_work_path, { :class => "visited"} %> </div>
+                  <h5 style = "font-family:notokr-bold;"> <%= link_to "profile", profile_path(params[:id]), { :class => "visited"} %> </h5>
+                  <h5 style = "font-family:notokr-bold;"> review </h5>
+              </div>
+              <br><br><br>
+              <p style = "font-family:notokr-regular"> <%= u.email %> </p>
+                <% end %>
+              <% end %>
+        </div>
+      </div>
+
+      <div class = "col-md-7">
+        <div class="profile_info" style = "padding:80px;">
+            <% @profile.reverse.each do |p| %>
+              <p style = "width:600px; font-family:notokr-thin; line-height:200%;">
+                <%= p.content %>
+                <p id = "key-color">
+                    <% if p.user_id == params[:id].to_i %>
+                      <%= link_to "수정", edit_profile_path(p)%>
+                      <%= link_to '삭제', profile_path(p), method: :delete, data: { confirm: '정말 삭제하시겠습니까?' } %>
+                    <% end %>
+                  </p>
+              </p>
+              <% end %>
+            <% if current_user.id == params[:id].to_i %>
+              <%= link_to image_tag("add.png", size: "12x12", alt: "add"), new_profile_path %>
             <% end %>
-          <% end %>
+        </div>
+      </div>
 
-          <div style="padding-left: 10px;"> <%= link_to "+" , new_work_path %> </div>
-          <h5> <%= link_to "PROFILE", profile_path(params[:id]) %> </h5>
-          <h5> REVIEW </h5>
-          <p> <%= u.email %> </p>
-        <% end %>
-      <% end %>
+      <div class = "col-md-2"></div>
+    </div>
   </div>
-
-  <div class="profile_info">
-      <% @profile.reverse.each do |p| %>
-        <p>
-          <%= p.content %>
-          <% if p.user_id == params[:id].to_i %>
-            <%= link_to "수정", edit_profile_path(p)%>
-            <%= link_to '삭제', profile_path(p), method: :delete, data: { confirm: '정말 삭제하시겠습니까?' } %>
-          <% end %>
-        </p>
-        <% end %>
-      <% if current_user.id == params[:id].to_i %>
-        <%= link_to "+", new_profile_path %>
-      <% end %>
-  </div>
-</div>
