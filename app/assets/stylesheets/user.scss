@@ -131,6 +131,7 @@ pre {
 .carousel .item img{
     margin:0 auto;
     margin-left: -430px;
+    margin-right: 500px;
     padding-bottom: 100px;
 }
 
@@ -149,19 +150,28 @@ pre {
 .landing1 {
   width: 500px;
   margin: 0 auto;
-  padding-top: 100px;
+  padding-top: 0px;
+  padding-right: 8px;
+
+}
+
+
+.landing1_logo {
+  width: 300px;
+  margin: 0 auto;
+  padding-top: 0px;
 }
 
 .landing1_intro {
     width: 800px;
-    margin: 0 auto;
+    margin: 20px auto;
     text-align: center;
 }
 
 .landing1 > h1 {
   color:#0AF0DE;
   margin: 0px;
-  font-size: 55px;
+  font-size: 45px;
   text-align: center;
 }
 
@@ -169,7 +179,7 @@ pre {
   width: 800px;
   color : white;
   text-align:center;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 #landing1 {

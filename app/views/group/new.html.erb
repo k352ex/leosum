@@ -1,12 +1,14 @@
 <div class="padding-80"> </div>
 
-<div style="width:500px; margin:0 auto; position:relative;">
+<div style="width:400px; margin:0 auto; position:relative;">
   <%= form_for @group , url: {action: "create"} , role: "form", class:"form-group" do |f| %>
     <p> <%= f.text_field :name, :placeholder => "그룹명" , class: "form-control" %> </p>
     <p> <%= f.text_area :content, size: "60x12" , :placeholder => "내용" , class:"form-control"%> </p>
-    <p> <%= f.text_field :current_member , :placeholder => "현재인원", class:"form-control" %> </p>
-    <p> <%= f.text_field :max_member , :placeholder => "최대인원" , class:"form-control"%> </p>
-    <p> <%= f.file_field :image , :placeholder => "그룹사진", class: "form-control"%> </p>
-    <p> <%= f.submit "제출" , class:"form-group"%> </p>
+    <p> <%= f.file_field :image , :placeholder => "그룹사진", class: "form-control",id:"file-upload"%> </p>
+  <div class="numbox">
+    <p> <%= f.text_field :current_member , :placeholder => "현재인원", class:"form-control" , id:"current-num"%> </p>
+    <p> <%= f.text_field :max_member , :placeholder => "최대인원" , class:"form-control"  ,id:"max-num"%> </p>
+  </div>
+    <p> <%= f.submit "제출" , class:"form-group", id:"register-id"%> </p>
   <% end %>
 </div>
