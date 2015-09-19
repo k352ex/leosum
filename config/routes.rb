@@ -1,11 +1,9 @@
 Rails.application.routes.draw do
 
-  get 'blog/profile'
-
   get 'blog/index'
-
   get 'work/index'
 
+  
   devise_for :users, controllers: { sessions: "users/sessions" }
 
   resources :post
@@ -17,6 +15,7 @@ Rails.application.routes.draw do
   resources :preview
   resources :work
   resources :review
+  resources :profile
 
   # User들의 여러 프로젝트들
   resources :users do
@@ -24,9 +23,9 @@ Rails.application.routes.draw do
   end
 
   # Blog 개인 프로필
-  resources :blog do
-    resources :profile
-  end
+  # resources :blog do
+  #   resources :profile
+  # end
 
   devise_scope :user do
     # 로그인 경로 지정

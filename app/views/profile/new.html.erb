@@ -1,0 +1,9 @@
+<div style="width: 500px;margin: 0 auto; padding-top: 150px;">
+  <%= form_for @profile, url: {action: "create"} , class: "form-group" do |f| %>
+    <%= f.label "타이틀" %>
+    <%= f.text_field :content , class: "form-control"%>
+    <%= hidden_field_tag(:user_id, current_user.id) %>
+    <div class="padding-10"> </div>
+    <%= f.submit "제출" , class: "form-control" %>
+  <% end %>
+</div>
