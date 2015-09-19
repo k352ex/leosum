@@ -29,6 +29,8 @@ gem 'fog'
 # D3.js
 gem "d3-rails"
 
+# 서버
+gem "puma"
 
 # Credential key
 gem 'dotenv-rails', :groups => [:development, :test]

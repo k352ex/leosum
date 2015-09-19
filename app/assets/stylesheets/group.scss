@@ -75,6 +75,7 @@
   float: right;
 }
 
+<<<<<<< HEAD
 .info_body {
   margin-top:50px;
   width: 580px;
@@ -82,12 +83,15 @@
 }
 
 #current-num{
+=======
+#current-num {
+>>>>>>> 30f05d3e8c5dd15f7936c39830a5ef1af0582027
   width: 80px;
   display: inline-block;
   // margin-left: px;
 }
 
-#max-num{
+#max-num {
     width: 80px;
     display: inline-block;
   //  margin-left: 320px;
@@ -95,14 +99,14 @@
 
 
 
-.form-control{
+.form-control {
   padding: 20px 15px;
   font-size: 13px;
   margin-bottom: 8px;
 }
 
 
-#register-id{
+#register-id {
   height: 40px;
   width: 80px;
   background-color: #65C2C4;
@@ -113,14 +117,13 @@
 
 }
 
-#file-upload{
+#file-upload {
  background-color:  #65C2C4;
  opacity: 0.6;
 
 }
 
 
-.numbox{
+.numbox {
   float:right;
-  // display: inline-block;
 }
