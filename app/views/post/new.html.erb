@@ -1,12 +1,8 @@
 <div style="width: 500px;margin: 0 auto; padding-top: 150px;">
   <%= form_for @post, url: {action: "create"}, class: "form-group" do |f| %>
-    <%= f.label "타이틀" %>
-    <%= f.text_field :title , class: "form-control"%>
-    <%= f.label "내용" %>
-    <%= f.text_area :context, size: "25x4" , class: "form-control" %>
-    <%= f.label "아티스트" %>
-    <%= f.text_field :artist , class: "form-control" %>
-    <%= f.label "첨부파일" %>
+    <%= f.text_field :title , class: "form-control", placeholder: "타이틀" %>
+    <%= f.text_area :context, size: "25x4" , class: "form-control" , placeholder: "내용" %>
+    <%= f.text_field :artist , class: "form-control", placeholder: "아티스트"  %>
     <%= f.file_field :image , class: "form-control" %>
     <%= hidden_field_tag(:user_id, current_user.id) %>
     <div class="padding-10"> </div>
