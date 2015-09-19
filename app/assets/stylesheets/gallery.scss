@@ -1,10 +1,17 @@
 // Place all the styles related to the gallery controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
 .gallery_image {
     display: inline-block;
     background-color: rgba(0, 0, 0, 0.82);
+}
+
+.gallery_image_preview {
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.82);
+    max-width:600px;
+    height:auto;
+    position: fixed;
 }
 
 .gallery_image > :hover {

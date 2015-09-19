@@ -5,14 +5,20 @@
 
   <% @post.each do |p| if p.id == params[:id].to_i %>
     <section class="col-md-6">
-      <%= image_tag(p.image, size: "600x450", alt: "test", class: "gallery_image") %>
+      <%= image_tag(p.image, alt: "test", class: "gallery_image_preview") %>
     </section>
 
-    <section class="col-md-4">
-      <h3> <%= p.artist %>  <span> <%= link_to " ", blog_path(p.user_id), id: "home_icon", class: "glyphicon glyphicon-home" %> </span> </h3>
-      <h4> <%= p.title %> </h4>
+    <section class="col-md-3">
+
+      <h3 style = "margin-top:0px; font-family:notokr-medium"> <%= p.artist %> &nbsp;
+        <span>
+          <%= link_to image_tag("home.png", size: "25x25", alt: "11"), blog_path(p.user_id) %>
+        </span>
+      </h3>
+
+      <h3 style = "font-family:notokr-medium; margin-top:10px;"> <%= p.title %> </h4>
       <div style="padding:100px;"> </div>
-      <p>  <%= p.context %> </p>
+      <h5 style = "font-family:notokr-light; line-height:200%;">  <%= p.context %> </h5>
     </section>
     <% end %>
   <% end %>
