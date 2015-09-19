@@ -1,20 +1,22 @@
 <div style="padding:80px;"> </div>
 
-<div  class="left_nav">
+<div class="left_nav" style = "padding-left:50px;">
     <% @user.each do |u| %>
       <% if u.id == params[:id].to_i %>
-        <h3> <%= u.username %> </h3>
-        <div style="padding:10px;"> </div>
-        <h5> WORKS </h5>
-        <% @work.each do |w| if w.user_id == params[:id].to_i %>
-          <p style="padding-left:10px; display:block;"> <%= w.title %> </p>
-          <% end %>
-        <% end %>
-        <div style="padding-left: 10px;"> <%= link_to "+" , new_work_path %> </div>
-        <h5> <%= link_to "PROFILE", profile_path(u) %> </h5>
-        <h5> REVIEW </h5>
+        <h3 style = "font-family:notokr-medium;"> <%= u.username %> </h3>
 
-        <p> <%= u.email %> </p>
+        <div style="padding:15px">
+            <h5 style = "font-family:notokr-bold;"> works </h5>
+            <% @work.each do |w| %>
+              <div style="padding-left: 10px; font-family:notokr-light; padding-bottom: 7px;"> &nbsp; <%= w.title %><br></div>
+            <% end %>
+
+            <div style="padding-left: 17px;"> <%= link_to image_tag("add.png", size: "12x12", alt: "add") , new_work_path, { :class => "visited"} %> </div>
+            <h5 style = "font-family:notokr-bold;"> <%= link_to "profile", profile_path(u), { :class => "visited"} %> </h5>
+            <h5 style = "font-family:notokr-bold;"> review </h5>
+        </div>
+        
+        <p style = "font-family:notokr-regular"> <%= u.email %> </p>
       <% end %>
     <% end %>
 </div>
