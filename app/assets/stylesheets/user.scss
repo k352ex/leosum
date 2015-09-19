@@ -99,7 +99,12 @@ pre {
 	background-color:#ccc;
 }
 
-#logo,#foot {
+#logo{
+  margin-left: 30px;
+}
+
+
+#foot {
   margin-left: 10px;
 }
 
@@ -349,11 +354,12 @@ pre {
   padding: 15px;
 }
 
-// 회원가입 폼
+// 회원가입 폼 //
 .register_form {
   width: 300px; // 가로사이즈 300 px
   margin: 0 auto; // 중앙 정렬
-  padding-top: 50px; // 위에 공백 200px
+  padding-top: 0px; // 위에 공백 200px
+
 }
 
 .btn{
@@ -373,6 +379,7 @@ pre {
 #register_form {
   width: 300px;
   margin-bottom:10px;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 // 제출버튼
@@ -408,4 +415,9 @@ pre {
     border-radius : 5px;
     border-bottom-right-radius: 5;
     border-top-right-radius: 5;
+}
+
+#logo-register{
+  margin-left: 70px;
+  margin-bottom: 40px;
 }

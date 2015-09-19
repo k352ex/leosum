@@ -1,16 +1,17 @@
 <!-- 회원가입 페이지  -->
 
 <div id="register_background">
-  <%= image_tag "logo.png" , width: 700, height: 300, class: "logo"%>
+  <%= image_tag "logo.png" , width: 700, height: 300, class: "logo", id:"logo-register"%>
     <div class="register_form" id="main_background">
+      <!-- <%= image_tag "logo.png" , width: 700, height: 300, class: "logo", id:"logo-register"%> -->
       <div class="form" id="main_form">
         <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
           <div class="form-group" id="register_form">
-            <%= f.text_field :username, class: "form-control", placeholder: "이름", autofocus: true, :required => true, autocomplete: "off" %>
+            <%= f.text_field :username, class: "form-control", placeholder:"이름", autofocus: true, :required => true, autocomplete: "off" %>
           </div>
 
           <div class="form-group" id="register_form">
-            <%= f.email_field :email, class: "form-control", placeholder: "이메일", autofocus: false, :required => true %>
+            <%= f.email_field :email, class: "form-control", placeholder:"이메일", autofocus: false, :required => true %>
           </div>
 
           <div class="form-group" id="register_form">
