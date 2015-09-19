@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get 'blog/index'
   get 'work/index'
 
-  
+
   devise_for :users, controllers: { sessions: "users/sessions" }
 
   resources :post

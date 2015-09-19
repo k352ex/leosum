@@ -28,7 +28,7 @@
   height: 215px;
   margin: 0 auto;
   margin-top: 30px;
-  border: 2px solid black;
+  border: 2px solid rgb(128, 128, 128);
   border-radius: 5px;
 }
 
@@ -59,18 +59,24 @@
 }
 
 .info_head {
-  width: 580px;
-  float: right;
-  margin-top: 10px;
+  width: 500px;
+  float: left;
+  margin-left: 15px;
+  margin-top: 8px;
+  color: #5F5F5F;
 }
 
 .info_head > h1 , p {
-  display: inline;
+  //display: inline;
+  color: #5F5F5F;
 }
 
 .info_head > p {
   width: 100px;
   float: right;
+  margin-right: -98px;
+  margin-top: -79px;
+  color: #5F5F5F;
 }
 
 .info_body {
@@ -78,26 +84,44 @@
   width: 580px;
 }
 
+  //display : inline;
+  width: 470px;
+  float: left;
+  margin-left:20px;
+  //margin-top: 50px;
+}
+
+.join_btn {
+  width: 100px;
+  float: right;
+  margin-top: 52px;
+}
+
+.btn {
+  padding:5px;
+}
+
+  margin-top:50px;
+  width: 580px;
+}
+
+>>>>>>> origin/master
+>>>>>>> Stashed changes
 #current-num {
   width: 80px;
   display: inline-block;
-
 }
 
 #max-num {
     width: 80px;
     display: inline-block;
-
 }
-
-
 
 .form-control {
   padding: 20px 15px;
   font-size: 13px;
   margin-bottom: 8px;
 }
-
 
 #register-id {
   height: 40px;
@@ -107,15 +131,12 @@
   color: white;
   margin-top: 20px;
   margin-left: 320px;
-
 }
 
 #file-upload {
  background-color:  #65C2C4;
  opacity: 0.6;
-
 }
-
 
 .numbox {
   float:right;
