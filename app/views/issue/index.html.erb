@@ -2,18 +2,24 @@
 
   <!-- 전제 넓이는 10 -->
   <div class="row">
-    <div class="col-xs-12 col-md-10 col-md-offset-1"><h1>&nbsp;이슈 제목</h1></div>
-    <div class="col-xs-12 col-md-10 col-md-offset-1">
+    <div class="col-xs-12 col-md-11 col-md-offset-1"><h1>&nbsp;이슈 제목</h1></div>
       <!-- 썸네일 표시 -->
+      <div class="col-md-1"></div>
       <% @post.each do |p| %>
+        <!-- 왼쪽 오른쪽에 1 크기의 공백 추가 -->
+        <% if @index != 0 && @index % 10 == 0 %>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+        <% end %>
+        <!-- 이미지 썸네일 표시 부분 -->
         <div class="col-xs-3 col-md-1">
-          <div style="background-color: #ff00ff; height: 100px; width: 100px;   position: absolute; top: 50%; left: 50%;">
+          <div id = "purple">
             <div class="absolute_pos"><h4 style="color: #ffffff;"><%= p.artist %></h4></div>
-            <div class="img_thumbnail absolute_pos">
-              <a href="/home/detail/<%= p.id %>"> <%= link_to image_tag(p.image, size: "100x100") , preview_path(p.id) %> </a>
+            <div class="absolute_pos, <%= @index %>">
+              <%= link_to image_tag(p.image, size: "100x100", alt: "test", class: "gallery_image, img_thumbnail") , preview_path(p.id) %>
             </div>
           </div>
         </div>
+        <% @index = @index + 1 %>
       <% end %>
-    </div>
   </div>
