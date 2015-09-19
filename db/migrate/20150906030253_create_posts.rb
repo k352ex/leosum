@@ -7,6 +7,8 @@ class CreatePosts < ActiveRecord::Migration
       t.string :image
       t.text   :context
 
+      t.string :keyword
+      
       # User는 여러개의 게시물을 가진다.
       t.integer :user_id
 

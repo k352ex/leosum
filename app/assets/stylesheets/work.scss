@@ -14,3 +14,16 @@
   background-color: rgba(0, 0, 0, 0.57);
   color: white;
 }
+
+.work_info {
+  width: 800px;
+  display: inline-block;
+}
+
+.work_info > p {
+  display: block;
+
+}
+.left_nav {
+  display: inline-block;
+}

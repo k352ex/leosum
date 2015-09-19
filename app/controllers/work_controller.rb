@@ -1,6 +1,6 @@
 class WorkController < ApplicationController
   def index
-`b vvv`
+
   end
 
   # Work 생성페이지
@@ -21,6 +21,10 @@ class WorkController < ApplicationController
     end
   end
 
+  def show
+    @work = Work.all
+    @user = User.all
+  end
 
 
 

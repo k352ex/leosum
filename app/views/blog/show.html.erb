@@ -7,7 +7,7 @@
         <div style="padding:10px;"> </div>
         <h5> WORKS </h5>
         <% @work.each do |w| if w.user_id == params[:id].to_i %>
-          <p style="padding-left:10px; display:block;"> <%= w.title %> </p>
+            <%= link_to w.title, work_path(w), style:"padding-left:10px; display:block;" %> </p>
           <% end %>
         <% end %>
         <div style="padding-left: 10px;"> <%= link_to "+" , new_work_path %> </div>

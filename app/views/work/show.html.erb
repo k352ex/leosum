@@ -1,0 +1,36 @@
+<div style="padding:80px;"> </div>
+
+<div  class="left_nav">
+    <% @user.each do |u| %>
+      <% if u.id == params[:id].to_i %>
+        <h3> <%= u.username %> </h3>
+        <div style="padding:10px;"> </div>
+        <h5> WORKS </h5>
+        <% @work.each do |w| if w.user_id == params[:id].to_i %>
+            <%= link_to w.title, work_path(w), style:"padding-left:10px; display:block;" %> </p>
+          <% end %>
+        <% end %>
+        <div style="padding-left: 10px;"> <%= link_to "+" , new_work_path %> </div>
+        <h5> <%= link_to "PROFILE", profile_path(u) %> </h5>
+        <h5> REVIEW </h5>
+
+        <p> <%= u.email %> </p>
+      <% end %>
+    <% end %>
+</div>
+
+<div class="work_info">
+    <% @work.reverse.each do |w| %>
+      <p>
+        <%= w.title %>
+        <% if w.user_id == params[:id].to_i %>
+          <%= link_to "수정", edit_profile_path(w)%>
+          <%= link_to '삭제', profile_path(w), method: :delete, data: { confirm: '정말 삭제하시겠습니까?' } %>
+        <% end %>
+      </p>
+      <% end %>
+    <% if current_user.id == params[:id].to_i %>
+      <%= link_to "+", new_profile_path %>
+    <% end %>
+</div>
+</div>
