@@ -43,7 +43,6 @@
 .group_info {
   width: 800px;
   height: 250px;
-  // margin: 10px;
   display: inline-block;
 }
 
@@ -52,7 +51,6 @@
 }
 
 .group_info > h1 , p{
-  // display: inline;
   width: 200px;
 }
 
@@ -75,26 +73,23 @@
   float: right;
 }
 
-<<<<<<< HEAD
 .info_body {
   margin-top:50px;
   width: 580px;
 
 }
 
-#current-num{
-=======
+
 #current-num {
->>>>>>> 30f05d3e8c5dd15f7936c39830a5ef1af0582027
   width: 80px;
   display: inline-block;
-  // margin-left: px;
+
 }
 
 #max-num {
     width: 80px;
     display: inline-block;
-  //  margin-left: 320px;
+
 }
 
 

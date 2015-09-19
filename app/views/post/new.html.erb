@@ -6,6 +6,6 @@
     <%= f.file_field :image , class: "form-control" %>
     <%= hidden_field_tag(:user_id, current_user.id) %>
     <div class="padding-10"> </div>
-    <%= f.submit "제출" , class: "form-control" %>
+    <%= f.submit "제출" , class: "form-control" ,id:"register-id" %>
   <% end %>
 </div>
