@@ -25,7 +25,7 @@
 
 .group_show {
   width: 800px;
-  height: 250px;
+  height: 215px;
   margin: 0 auto;
   margin-top: 30px;
   border: 2px solid black;
@@ -34,6 +34,7 @@
 
 .group_image {
   // margin: 10px;
+  padding:5px;
   width: 200px;
   display: inline;
   float: left;
@@ -60,7 +61,7 @@
 }
 
 .info_head {
-  width: 600px;
+  width: 580px;
   float: right;
   margin-top: 10px;
 }
@@ -72,6 +73,12 @@
 .info_head > p {
   width: 100px;
   float: right;
+}
+
+.info_body {
+  margin-top:50px;
+  width: 580px;
+
 }
 
 #current-num{
