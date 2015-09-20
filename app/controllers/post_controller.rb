@@ -10,11 +10,9 @@ class PostController < ApplicationController
   end
 
   def create
+    # @user = User.all
     @post = Post.new(post_params)
-    @keyword = Keyword.new
-    @keyword.content = params[:keyword]
     @post.user_id = params[:user_id]
-    @keyword.save
 
     if @post.save
       redirect_to authenticated_root_path

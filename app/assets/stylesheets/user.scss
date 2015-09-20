@@ -268,6 +268,11 @@ pre {
 
 #landing2_circle > p {
   width: 200px;
+  color: white;
+}
+
+#landing2_circle > .circle_box > p {
+  width: 100%;
 }
 
 .landing3 {
@@ -302,6 +307,14 @@ pre {
   margin: 30px;
 }
 
+#landing3_circle > p {
+  color: white;
+  width: 100%;
+}
+
+#landing3_circle > .circle > p {
+  width: 100%;
+}
 
 #landingtext{
   color: #0AF0DE;

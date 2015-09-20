@@ -3,7 +3,6 @@
     <%= f.text_field :title , class: "form-control", placeholder: "타이틀", :required => true, autofocus: true %>
     <%= f.text_area :context, size: "25x4" , class: "form-control" , placeholder: "내용" %>
     <%= f.text_field :artist , class: "form-control", placeholder: "아티스트" , :required => true %>
-    <%#= f.text_field :keyword, class: "form-control", placeholder: "키워드" %>
     <%= f.file_field :image , class: "form-control" , :required => true %>
     <%= hidden_field_tag(:user_id, current_user.id) %>
     <div class="padding-10"> </div>

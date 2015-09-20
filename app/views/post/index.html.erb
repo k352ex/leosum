@@ -12,7 +12,7 @@
           <a href="#" class="dropdown-toggle" id="user_toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">  <i class="glyphicon glyphicon-user">  </i> </a>
           <ul class="dropdown-menu">
             <li> <%= current_user.username %> </li>
-            <% @user.each do |x| if x.id == current_user.id %>
+            <% @user.each do |x| if x.id == current_user.id.to_i %>
               <li styel ="font-family:'notokr-medium';"> <a href="/blog/<%= x.id %>"> 마이페이지 </a></li>
               <% end %>
             <% end %>

@@ -1,24 +1,39 @@
 <link rel="stylesheet" type="text/css" href="/wordle/jqcloud.css" />
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
 <script type="text/javascript" src="/wordle/jqcloud-1.0.4.js"></script>
-<%= javascript_tag do %>
-  /*!
-   * Create an array of word objects, each representing a word in the cloud
-   */
-  var word_array = [
-      {text: "<%= j raw @post[0].artist.as_json %>", weight: 15, link: "/preview/<%= j raw @post[0].id.as_json %>"},
-      {text: "hello", weight: 9, link: "http://jquery.com/"},
-      {text: "Dolor", weight: 6, html: {title: "I can haz any html attribute"}},
-      {text: "Sit", weight: 7},
-      {text: "Amet", weight: 5}
-      // ...as many words as you want
-  ];
 
-  $(function() {
-    // When DOM is ready, select the container element and call the jQCloud method, passing the array of words as the first argument.
-    $("#example").jQCloud(word_array);
-  });
-<% end %>
+<div class="issue_word_array">
+  <%= javascript_tag do %>
 
+    var word_array = [
+
+        {text: "<%= j raw @post[0].artist.as_json %>", weight: 44, link: "/preview/<%= j raw @post[0].id.as_json %>"},
+        {text: "<%= j raw @post[1].artist.as_json %>", weight: 15, link: "http://jquery.com/"},
+        {text: "<%= j raw @post[2].artist.as_json %>", weight: 27, link: "http://jquery.com/"},
+        {text: "<%= j raw @post[3].artist.as_json %>", weight: 8, link: "http://jquery.com/"},
+        {text: "<%= j raw @post[4].artist.as_json %>", weight: 44, link: "http://jquery.com/"},
+        {text: "<%= j raw @post[5].artist.as_json %>", weight: 12, link: "http://jquery.com/"},
+        {text: "<%= j raw @post[7].artist.as_json %>", weight: 5, link: "http://jquery.com/"},
+        {text: "<%= j raw @post[8].artist.as_json %>", weight: 22, link: "http://jquery.com/"},
+        {text: "<%= j raw @post[5].artist.as_json %>", weight: 12, link: "http://jquery.com/"},
+        {text: "<%= j raw @post[7].artist.as_json %>", weight: 5, link: "http://jquery.com/"},
+        {text: "<%= j raw @post[8].artist.as_json %>", weight: 22, link: "http://jquery.com/"},
+        {text: "<%= j raw @post[5].artist.as_json %>", weight: 12, link: "http://jquery.com/"},
+        {text: "<%= j raw @post[7].artist.as_json %>", weight: 5, link: "http://jquery.com/"},
+        {text: "<%= j raw @post[8].artist.as_json %>", weight: 22, link: "http://jquery.com/"},
+        {text: "<%= j raw @post[9].artist.as_json %>", weight: 24, link: "http://jquery.com/"},
+        {text: "<%= j raw @post[10].artist.as_json %>", weight: 10, link: "http://jquery.com/"},
+        {text: "<%= j raw @post[11].artist.as_json %>", weight: 18, link: "http://jquery.com/"},
+        {text: "<%= j raw @post[12].artist.as_json %>", weight: 9, link: "http://jquery.com/"},
+        {text: "<%= j raw @post[13].artist.as_json %>", weight: 33, link: "http://jquery.com/"},
+        {text: "<%= j raw @post[13].artist.as_json %>", weight: 29, link: "http://jquery.com/"}
+    ];
+    <!-- $(function() {
+            // When DOM is ready, select the container element and call the jQCloud method, passing the array of words as the first argument.
+            $("#example").jQCloud(word_array);
+          }); -->
+
+  <% end %>
+</div>
 <!-- You should explicitly specify the dimensions of the container element -->
-<div id="example" style="width: 550px; height: 350px;"></div>
+<div id="example" style="width: 800px; height: 550px; margin: 0 auto; margin-top: 100px;"></div>
