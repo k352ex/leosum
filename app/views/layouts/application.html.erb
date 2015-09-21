@@ -5,6 +5,13 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
+  <!-- Issue & Artist 페이지  -->
+  <link rel="stylesheet" type="text/css" href="/wordle/jqcloud.css" />
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+  <script type="text/javascript" src="/wordle/jqcloud-1.0.4.js"></script>
+  <!-- ---------------------- -->
+
 </head>
 <body>
   <% if signed_in? %>

@@ -122,13 +122,13 @@
   margin-bottom: 8px;
 }
 
-#register-id {
+#register_id {
   height: 40px;
   width: 80px;
   background-color: #65C2C4;
   border-radius: 5px;
   color: white;
-  margin-top: 20px;
+  // margin-top: 20px;
   margin-left: 320px;
 }
 
@@ -138,5 +138,16 @@
 }
 
 .numbox {
-  float:right;
+  width:400px;
+  text-align:right;
+}
+
+// 그룹 이름
+#form_name {
+  width: 400px;
+}
+
+// 인풋 폼
+.form_field {
+  width: 400px;
 }

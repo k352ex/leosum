@@ -1,6 +1,6 @@
-<link rel="stylesheet" type="text/css" href="/wordle/jqcloud.css" />
+<!-- <link rel="stylesheet" type="text/css" href="/wordle/jqcloud.css" />
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
-<script type="text/javascript" src="/wordle/jqcloud-1.0.4.js"></script>
+<script type="text/javascript" src="/wordle/jqcloud-1.0.4.js"></script> -->
 
 <div class="issue_word_array">
   <%= javascript_tag do %>
@@ -28,10 +28,9 @@
         {text: "<%= j raw @post[13].artist.as_json %>", weight: 33, link: "http://jquery.com/"},
         {text: "<%= j raw @post[13].artist.as_json %>", weight: 29, link: "http://jquery.com/"}
     ];
-    <!-- $(function() {
-            // When DOM is ready, select the container element and call the jQCloud method, passing the array of words as the first argument.
+    $(function() {
             $("#example").jQCloud(word_array);
-          }); -->
+          });
 
   <% end %>
 </div>

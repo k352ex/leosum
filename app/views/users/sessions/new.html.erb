@@ -1,4 +1,6 @@
 <div class="container">
+
+        <!-- 로그인 페이지 하단의 슬라이드 버튼  -->
       <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -7,15 +9,15 @@
           <li data-target="#myCarousel" data-slide-to="3"></li>
         </ol>
 
+          <!-- 로그인 페이지 및 소개 페이지 -->
+          <!-- 로그인 폼 , 이어섬 소개 -->
         <div class="carousel-inner">
           <div class="item active"  id="Main_landing">
+            <!-- 첫번째 아이템 -->
             <div class="item">
-
-
+                <!-- 로그인 폼  -->
               <div class="login_form">
                 <%= image_tag "logo.png" , width: 700, height: 400, class: "logo"%>
-
-
                 <div class = "row">
                   <div class ="col-md-1"></div>
                   <div class ="col-md-10">
@@ -26,14 +28,16 @@
                         </div>
 
                         <div class="form-group" id="form_group">
-                          <%= f.password_field :password, class: "form-control", placeholder: "비밀번호", autocomplete: "off" , :required => true%>
+                          <%= f.password_field :password, class: "form-control", placeholder: "비밀번호", autocomplete: "off" , :required => true %>
                         </div>
 
                         <div class="login_option">
                           <div>
+                            <!-- 세션유지 기능 만들기 -->
                             <label class="radio-inline">
                               <input type="radio" name="inlineRadioOptions" id="inlineRadio1" > 로그인 상태 유지
                             </label>
+                            <!-- 비밀번호 찾기 기능 devise 찾아보기 -->
                             <span style="float:right;"> 비밀번호 찾기 </span>
                           </div>
                         </div>
@@ -51,8 +55,8 @@
             </div>
           </div>
 
+        <!-- 두번 째 아이템 -->
       <div class="item" id="landing1">
-
         <div class="landing1_logo">
           <%= image_tag "logo.png" , width: 420, height: 240,class: "landing1_logo"%>
         </div>
@@ -68,6 +72,7 @@
         </div>
       </div>
 
+        <!-- 세번 째 아이템 -->
       <div class="item" id="landing2">
         <div class="landing2">
           <h1> Artist</h1>
@@ -96,6 +101,7 @@
         </div>
       </div>
 
+        <!-- 네번 째 아이템 -->
       <div class="item" id="landing3">
         <div class="landing3">
           <h1> Public </h1>
@@ -118,11 +124,14 @@
         </div>
       </div>
 
+       <!-- 왼쪽으로 이동하기위한 버튼 -->
       <a class="left carousel-control" id="left carousel-control" href="#myCarousel" data-slide="prev">
+          <!-- 버튼이미지 -->
           <span class="glyphicon glyphicon-chevron-left"> </span>
       </a>
-
+        <!-- 오른쪽으로 이동하기위한 버튼 -->
       <a class="right carousel-control" href="#myCarousel" data-slide="next">
+          <!-- 버튼이미지 -->
           <span class="glyphicon glyphicon-chevron-right"> </span>
       </a>
       </div>
