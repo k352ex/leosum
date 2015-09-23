@@ -3,7 +3,8 @@
     <%= f.text_field :title , class: "form-control", placeholder: "타이틀", :required => true, autofocus: true %>
     <%= f.text_area :context, size: "25x4" , class: "form-control" , placeholder: "내용" %>
     <%= f.text_field :artist , class: "form-control", placeholder: "아티스트" , :required => true %>
-    <%= f.file_field :image , class: "form-control" , :required => true %>
+    <%= f.file_field :image  , class: "form-control" , :required => true %>
+    <%= f.text_field :tag_list , class: "form-control", placeholder: "태그 ex) 이어섬, 아티스트" %>
     <%= hidden_field_tag(:user_id, current_user.id) %>
     <div class="padding-10"> </div>
     <%= f.submit "제출" , class: "form-control" ,id:"register-id" %>

@@ -32,6 +32,10 @@ gem "d3-rails"
 # 서버
 gem "puma"
 
+# 태그
+gem 'acts-as-taggable-on'
+
+
 # Credential key
 gem 'dotenv-rails', :groups => [:development, :test]
 
