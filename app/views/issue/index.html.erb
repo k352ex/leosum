@@ -5,46 +5,22 @@
 <div class="issue_word_array">
   <%= javascript_tag do %>
 
-  <!-- word_array는 배열로 tag_list를 해쉬로 해서 삽입하기  -->
-  <!-- text에 tag명  weight에 가중치, link에 주소로 -->
-  var word_array = [];
-  word_array = <%= @issue_list %>;
-  <!-- var word_array = JSON.parse('#{raw(@issue_list.to_json)}'); -->
-  <!-- var word_array = [
-        {text : "<%= j raw @tag_list[0].as_json %>", weight: 30, link: "/preview/<%= j raw @post[0].id.as_json %>"},
-        {text : "<%= j raw @tag_list[1].as_json %>", weight: 24, link: "/preview/<%= j raw @post[0].id.as_json %>"},
-        {text : "<%= j raw @tag_list[2].as_json %>", weight: 34, link: "/preview/<%= j raw @post[0].id.as_json %>"},
-        {text : "<%= j raw @tag_list[3].as_json %>", weight: 14, link: "/preview/<%= j raw @post[0].id.as_json %>"},
-        {text : "<%= j raw @tag_list[4].as_json %>", weight: 24, link: "/preview/<%= j raw @post[0].id.as_json %>"},
-        {text : "<%= j raw @tag_list[5].as_json %>", weight: 19, link: "/preview/<%= j raw @post[0].id.as_json %>"},
-        {text : "<%= j raw @tag_list[6].as_json %>", weight: 20, link: "/preview/<%= j raw @post[0].id.as_json %>"},
-        {text : "<%= j raw @tag_list[7].as_json %>", weight: 18, link: "/preview/<%= j raw @post[0].id.as_json %>"},
-        {text : "<%= j raw @tag_list[8].as_json %>", weight: 17, link: "/preview/<%= j raw @post[0].id.as_json %>"},
-        {text : "<%= j raw @tag_list[9].as_json %>", weight: 4, link: "/preview/<%= j raw @post[0].id.as_json %>"},
-        {text : "<%= j raw @tag_list[10].as_json %>", weight: 1, link: "/preview/<%= j raw @post[0].id.as_json %>"},
-        {text : "<%= j raw @tag_list[11].as_json %>", weight: 14, link: "/preview/<%= j raw @post[0].id.as_json %>"},
-        {text : "<%= j raw @tag_list[12].as_json %>", weight: 24, link: "/preview/<%= j raw @post[0].id.as_json %>"},
-        {text : "<%= j raw @tag_list[13].as_json %>", weight: 10, link: "/preview/<%= j raw @post[0].id.as_json %>"},
-        {text : "<%= j raw @tag_list[14].as_json %>", weight: 44, link: "/preview/<%= j raw @post[0].id.as_json %>"},
-        {text : "<%= j raw @tag_list[15].as_json %>", weight: 44, link: "/preview/<%= j raw @post[0].id.as_json %>"},
-        {text : "<%= j raw @tag_list[16].as_json %>", weight: 44, link: "/preview/<%= j raw @post[0].id.as_json %>"},
-        {text : "<%= j raw @tag_list[17].as_json %>", weight: 44, link: "/preview/<%= j raw @post[0].id.as_json %>"},
-        {text : "<%= j raw @tag_list[18].as_json %>", weight: 44, link: "/preview/<%= j raw @post[0].id.as_json %>"},
-        {text : "<%= j raw @tag_list[19].as_json %>", weight: 44, link: "/preview/<%= j raw @post[0].id.as_json %>"},
-        {text : "<%= j raw @tag_list[20].as_json %>", weight: 44, link: "/preview/<%= j raw @post[0].id.as_json %>"},
-        {text : "<%= j raw @tag_list[21].as_json %>", weight: 44, link: "/preview/<%= j raw @post[0].id.as_json %>"},
-        {text : "<%= j raw @tag_list[22].as_json %>", weight: 44, link: "/preview/<%= j raw @post[0].id.as_json %>"},
-        {text : "<%= j raw @tag_list[23].as_json %>", weight: 44, link: "/preview/<%= j raw @post[0].id.as_json %>"},
-        {text : "<%= j raw @tag_list[24].as_json %>", weight: 44, link: "/preview/<%= j raw @post[0].id.as_json %>"},
-        {text : "<%= j raw @tag_list[25].as_json %>", weight: 44, link: "/preview/<%= j raw @post[0].id.as_json %>"},
-        {text : "<%= j raw @tag_list[26].as_json %>", weight: 44, link: "/preview/<%= j raw @post[0].id.as_json %>"},
-        {text : "<%= j raw @tag_list[27].as_json %>", weight: 44, link: "/preview/<%= j raw @post[0].id.as_json %>"},
-        {text : "<%= j raw @tag_list[28].as_json %>", weight: 44, link: "/preview/<%= j raw @post[0].id.as_json %>"},
-        {text : "<%= j raw @tag_list[29].as_json %>", weight: 44, link: "/preview/<%= j raw @post[0].id.as_json %>"}]; -->
-        document.write(word_array);
-        $(function() {
-                $("#example").jQCloud(<%= @issue_list.to_json %>);
-              });
+    <!-- word_array는 배열로 tag_list를 해쉬로 해서 삽입하기  -->
+    <!-- text에 tag명  weight에 가중치, link에 주소로 -->
+
+    <% post_all_count = @post.count %>
+    <% post_count = 1 %>
+
+    var word_array = [
+      <% @post.tag_counts.each do |p| %>
+        {text: "<%= p.name %>", weight: <%= p.taggings_count.to_i %>, link: "/preview/<%= p.id %>"}<%= ',' if post_count != post_all_count %>
+        <% post_count += 1 %>
+      <% end %>
+    ];
+
+    $(function() {
+      $("#example").jQCloud(word_array);
+    });
   <% end %>
 </div>
 
