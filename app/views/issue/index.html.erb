@@ -1,19 +1,12 @@
-<!-- <link rel="stylesheet" type="text/css" href="/wordle/jqcloud.css" />
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
-<script type="text/javascript" src="/wordle/jqcloud-1.0.4.js"></script> -->
-
 <div class="issue_word_array">
   <%= javascript_tag do %>
-
-    <!-- word_array는 배열로 tag_list를 해쉬로 해서 삽입하기  -->
-    <!-- text에 tag명  weight에 가중치, link에 주소로 -->
 
     <% post_all_count = @post.count %>
     <% post_count = 1 %>
 
     var word_array = [
       <% @post.tag_counts.each do |p| %>
-        {text: "<%= p.name %>", weight: <%= p.taggings_count.to_i %>, link: "/preview/<%= p.id %>"}<%= ',' if post_count != post_all_count %>
+        {text: "<%= p.name %>", weight: <%= p.taggings_count.to_i %>, link: "/preview/<%= p.id %>"}<%= ',' if !p.nil? %>
         <% post_count += 1 %>
       <% end %>
     ];
@@ -21,6 +14,7 @@
     $(function() {
       $("#example").jQCloud(word_array);
     });
+    
   <% end %>
 </div>
 

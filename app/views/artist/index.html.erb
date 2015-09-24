@@ -1,29 +1,11 @@
 <div class="artist_word_array">
   <%= javascript_tag do %>
 
-    var word_array = [
-
-        {text: "<%= j raw @post[0].artist.as_json %>", weight: 44, link: "/preview/<%= j raw @post[0].id.as_json %>"},
-        {text: "<%= j raw @post[1].artist.as_json %>", weight: 15, link: "http://jquery.com/"},
-        {text: "<%= j raw @post[2].artist.as_json %>", weight: 27, link: "http://jquery.com/"},
-        {text: "<%= j raw @post[3].artist.as_json %>", weight: 8, link: "http://jquery.com/"},
-        {text: "<%= j raw @post[4].artist.as_json %>", weight: 44, link: "http://jquery.com/"},
-        {text: "<%= j raw @post[5].artist.as_json %>", weight: 12, link: "http://jquery.com/"},
-        {text: "<%= j raw @post[7].artist.as_json %>", weight: 5, link: "http://jquery.com/"},
-        {text: "<%= j raw @post[8].artist.as_json %>", weight: 22, link: "http://jquery.com/"},
-        {text: "<%= j raw @post[5].artist.as_json %>", weight: 12, link: "http://jquery.com/"},
-        {text: "<%= j raw @post[7].artist.as_json %>", weight: 5, link: "http://jquery.com/"},
-        {text: "<%= j raw @post[8].artist.as_json %>", weight: 22, link: "http://jquery.com/"},
-        {text: "<%= j raw @post[5].artist.as_json %>", weight: 12, link: "http://jquery.com/"},
-        {text: "<%= j raw @post[7].artist.as_json %>", weight: 5, link: "http://jquery.com/"},
-        {text: "<%= j raw @post[8].artist.as_json %>", weight: 22, link: "http://jquery.com/"},
-        {text: "<%= j raw @post[9].artist.as_json %>", weight: 24, link: "http://jquery.com/"},
-        {text: "<%= j raw @post[10].artist.as_json %>", weight: 10, link: "http://jquery.com/"},
-        {text: "<%= j raw @post[11].artist.as_json %>", weight: 18, link: "http://jquery.com/"},
-        {text: "<%= j raw @post[12].artist.as_json %>", weight: 9, link: "http://jquery.com/"},
-        {text: "<%= j raw @post[13].artist.as_json %>", weight: 33, link: "http://jquery.com/"},
-        {text: "<%= j raw @post[13].artist.as_json %>", weight: 29, link: "http://jquery.com/"}
-    ];
+  var word_array = [
+    <% @user.each do |u| %>
+      {text: "<%= u.username %>", weight: <%= 10 %>, link: "/blog/<%= u.id %>"}<%= ',' if !u.nil? %>
+    <% end %>
+  ];
 
     $(function() {
             $("#example").jQCloud(word_array);
