@@ -17,3 +17,7 @@
 //= require_tree .
 //= require d3
 //= require jqcloud
+
+$('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').focus()
+})

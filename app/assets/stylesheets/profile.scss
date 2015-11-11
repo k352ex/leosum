@@ -17,9 +17,20 @@
 
 #key-color{
   color:#0AF0DE;
+  margin-left: 5px;
 }
 
 .mouse_control:hover{
   color:black;
   text-decoration: none;
+}
+
+.edit {
+	background-color: rgba(63, 113, 128, 0.36);
+	border-radius:3px;
+}
+
+.delete {
+	background-color: rgba(63, 113, 128, 0.36);
+	border-radius:3px;
 }

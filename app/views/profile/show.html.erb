@@ -34,16 +34,14 @@
       <div class = "col-md-7">
         <div class="profile_info" style = "padding:80px;">
             <% @profile.reverse.each do |p| %>
-              <p style = "width:600px; font-family:notokr-thin; line-height:200%;">
+              <p style = "width:600px; font-family:notokr-thin; line-height:200%; display:inline">
                 <%= p.content %>
-                <p id = "key-color">
+                <p id = "key-color" style="display:inline;">
                     <% if p.user_id == current_user.id %>
-                      <%= p.user_id %>
-                      <%= params[:id].to_i %>
-                      <%= link_to "수정", edit_profile_path(p)%>
-                      <%= link_to '삭제', profile_path(p), method: :delete, data: { confirm: '정말 삭제하시겠습니까?' } %>
+                      <%= link_to "수정", edit_profile_path(p), class:"edit" %>
+                      <%= link_to '삭제', profile_path(p), class:"delete", method: :delete, data: { confirm: '정말 삭제하시겠습니까?' } %>
                     <% end %>
-                  </p>
+                </p>
               </p>
               <% end %>
             <% if current_user.id == params[:id].to_i %>

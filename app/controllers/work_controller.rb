@@ -14,7 +14,8 @@ class WorkController < ApplicationController
     @work = Work.new(work_params)
     @work.user_id = params[:user_id]
     if @work.save
-      redirect_to blog_path(params[:user_id].to_i)
+      redirect_to @work
+      # redirect_to blog_path(params[:user_id].to_i)
     else
       flash[:alert] = '실패'
       render 'new'

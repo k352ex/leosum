@@ -1,11 +1,11 @@
-<div style="padding:80px;"> </div>
-
-<section class="row">
-      <div class="col-md-2"> </div>
-      <div class="col-md-8">
-        <% @post.each do |p| %>
-          <%= link_to image_tag(p.image, size: "100x100", alt: "test", class: "gallery_image") , preview_path(p.id) %>
-          <% end %>
-      </div>
-      <div class="col-md-2"> </div>
-</section>
+<div class="container-fluid">
+	<section class="row">
+	      <!-- <div class="col-md-2"> </div> -->
+	      <div class="col-md-12">
+	        <% @post.each do |p| %>
+	          <%= link_to image_tag(p.image, size: "100x100", alt: "test", class: "gallery_image") , preview_path(p.id) %>
+	          <% end %>
+	      </div>
+	      <!-- <div class="col-md-2"> </div> -->
+	</section> 
+</div>

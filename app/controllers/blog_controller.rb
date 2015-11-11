@@ -12,5 +12,4 @@ class BlogController < ApplicationController
   def profile
     @user = User.all
   end
-
 end

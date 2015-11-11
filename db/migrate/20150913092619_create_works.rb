@@ -3,6 +3,7 @@ class CreateWorks < ActiveRecord::Migration
     create_table :works do |t|
 
       t.string  :title
+      t.string  :file
       t.text    :content
       t.integer :user_id
 

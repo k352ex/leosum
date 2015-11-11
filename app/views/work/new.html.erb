@@ -1,13 +1,12 @@
 <div class="new_work">
-  <%= form_for @work, url: {action: "create"} do |w| %>
-    <p>
+  <%= form_for @work, url: {action: "create"} , class: "workForm" do |w| %>
+
       <%= w.label "타이틀" %>
       <%= w.text_field :title , class: "form-control"  %>
       <%= w.label "작업내용" %>
-      <%= w.text_field :content, class: "form-control" %>
+      <%= w.text_field :content, class: "form-control", id: "WorkTextfield" %>
+      <%= w.file_field :file, class: "form-control" %>
       <%= hidden_field_tag(:user_id, current_user.id) %>
-    </p>
-
     <%= w.submit "제출" , class: "form-control" , id: "work_submit"%>
   <% end %>
 </div>

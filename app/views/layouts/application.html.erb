@@ -6,17 +6,20 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 
+  <!-- 모바일 우선 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  
   <!-- Issue & Artist 페이지  -->
   <link rel="stylesheet" type="text/css" href="/wordle/jqcloud.css" />
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
   <script type="text/javascript" src="/wordle/jqcloud-1.0.4.js"></script>
-  <!-- ---------------------- -->
 
 </head>
-<body>
+<body> 
   <% if signed_in? %>
-  <nav>
-    <div class="container" id="nav_setting">
+  <div class="container-fluid" id="nav_setting">
+    <nav>
       <div class="navbar-header">
         <a href="/"> <%= image_tag "logo3.png", width: 125 , height: 100 %> </a>
       </div>
@@ -39,7 +42,10 @@
                 <li role="separator" class="divider"></li>
                 <li role="presentation" class="dropdown-header">그룹</li>
                 <li role="separator" class="divider"></li>
-                <li> <%= link_to "이미지업로드", new_post_path , target: "_new" %> </li>
+                <li> <%= link_to '이미지업로드', "#", data: {toggle: "modal", target: "#myModal"} %> </li>
+                <!-- <li> <%= link_to "이미지업로드", new_post_path, target: "_new", :class => "btn", "data-toggle" => "modal", "data-target" => "#myModal" %> </li> -->
+                  <!-- Modal -->
+                      
                 <li>
                     <% if user_signed_in? %>
                       <%= link_to('로그아웃', destroy_user_session_path, :method => :delete) %>
@@ -48,10 +54,39 @@
               </ul>
           </li>
       </ul>
-    </div>
-  </nav>
+    </nav>
+  </div>
   <% end %>
 <%= yield %>
 
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">이미지 업로드</h4>
+      </div>
+      <div class="modal-body">
+        <div style="width: 500px;margin: 0 auto;">
+         <% if !@post.nil? %> 
+        <%= form_for @post, url: {action: "create"}, class: "form-group" do |f| %>
+          <%= f.text_field :title , class: "form-control", placeholder: "타이틀", :required => true, autofocus: true %>
+          <%= f.text_area :context, size: "25x4" , class: "form-control" , placeholder: "내용" %>
+          <%= f.text_field :artist , class: "form-control", placeholder: "아티스트" , :required => true %>
+          <%= f.file_field :image  , class: "form-control" , :required => true %>
+          <%= f.text_field :tag_list , class: "form-control", placeholder: "태그 ex) 이어섬, 아티스트" %>
+          <%= hidden_field_tag(:user_id, current_user.id) %>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <%= f.submit "제출" , class: "form-control" ,id:"register-id" %>
+<!--         <button type="button" class="btn btn-default", id:"register-id" data-dismiss="modal">Close</button>
+ -->        <% end %>
+          <% end %>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>

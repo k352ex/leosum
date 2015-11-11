@@ -8,6 +8,8 @@ class User < ActiveRecord::Base
   has_many :works
   has_many :reviews
   has_many :profile
+  has_many :group
+  
   belongs_to :blog
 
 end

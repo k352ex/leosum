@@ -1,25 +1,25 @@
-<div class="padding-80"> </div>
+<div class="container-fluid">
+  <section class="row">
+    <section class ="col-md-2"> </section>
 
-<section class="row">
-  <section class ="col-md-2"> </section>
+    <% @post.each do |p| if p.id == params[:id].to_i %>
+      <section class="col-md-6">
+        <%= image_tag(p.image, size: "600x500", alt: "test", class: "gallery_image_preview") %>
+      </section>
 
-  <% @post.each do |p| if p.id == params[:id].to_i %>
-    <section class="col-md-6">
-      <%= image_tag(p.image, alt: "test", class: "gallery_image_preview") %>
-    </section>
+      <section class="col-md-3">
 
-    <section class="col-md-3">
+        <h3 style = "margin-top:0px; font-family:notokr-medium"> <%= p.artist %> &nbsp;
+          <span>
+            <%= link_to image_tag("home.png", size: "25x25", alt: "11"), blog_path(p.user_id) %>
+          </span>
+        </h3>
 
-      <h3 style = "margin-top:0px; font-family:notokr-medium"> <%= p.artist %> &nbsp;
-        <span>
-          <%= link_to image_tag("home.png", size: "25x25", alt: "11"), blog_path(p.user_id) %>
-        </span>
-      </h3>
-
-      <h3 style = "font-family:notokr-medium; margin-top:10px;"> <%= p.title %> </h3>
-      <div style="padding:100px;"> </div>
-      <h5 style = "font-family:notokr-light; line-height:200%;">  <%= p.context %> </h5>
-    </section>
+        <h3 style = "font-family:notokr-medium; margin-top:10px;"> <%= p.title %> </h3>
+        <div style="padding:100px;"> </div>
+        <h5 style = "font-family:notokr-light; line-height:200%;">  <%= p.context %> </h5>
+      </section>
+      <% end %>
     <% end %>
-  <% end %>
-</section>
+  </section>
+</div>
