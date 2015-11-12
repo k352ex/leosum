@@ -1,4 +1,7 @@
+# coding: utf-8
 source 'https://rubygems.org'
+
+ruby '2.2.2'
 
 # 윈도우 환경 세팅
 gem 'tzinfo'

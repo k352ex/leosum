@@ -1,13 +1,15 @@
+# coding: utf-8
 class GalleryController < ApplicationController
 
   def index
     @user = User.all
-    @post = Post.all
+    @post = Post.new
+    @posts = Post.all
 
     # @post_new = Post.new
     @tempImage = Array.new
 
-    @post.each do |p|
+    @posts.each do |p|
       @tempImage.append(p)
     end
 

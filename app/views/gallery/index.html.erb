@@ -2,7 +2,7 @@
 	<section class="row">
 	      <!-- <div class="col-md-2"> </div> -->
 	      <div class="col-md-12">
-	        <% @post.each do |p| %>
+	        <% @posts.each do |p| %>
 	          <%= link_to image_tag(p.image, size: "100x100", alt: "test", class: "gallery_image") , preview_path(p.id) %>
 	          <% end %>
 	      </div>

@@ -69,21 +69,21 @@
       </div>
       <div class="modal-body">
         <div style="width: 500px;margin: 0 auto;">
-         <% if !@post.nil? %> 
-        <%= form_for @post, url: {action: "create"}, class: "form-group" do |f| %>
-          <%= f.text_field :title , class: "form-control", placeholder: "타이틀", :required => true, autofocus: true %>
-          <%= f.text_area :context, size: "25x4" , class: "form-control" , placeholder: "내용" %>
-          <%= f.text_field :artist , class: "form-control", placeholder: "아티스트" , :required => true %>
-          <%= f.file_field :image  , class: "form-control" , :required => true %>
-          <%= f.text_field :tag_list , class: "form-control", placeholder: "태그 ex) 이어섬, 아티스트" %>
-          <%= hidden_field_tag(:user_id, current_user.id) %>
+         <% if !@post.nil? %>
+           <%= form_for @post, url: {action: "create"}, class: "form-group" do |f| %>
+             <%= f.text_field :title , class: "form-control", placeholder: "타이틀", :required => true, autofocus: true %>
+             <%= f.text_area :context, size: "25x4" , class: "form-control" , placeholder: "내용" %>
+             <%= f.text_field :artist , class: "form-control", placeholder: "아티스트" , :required => true %>
+             <%= f.file_field :image  , class: "form-control" , :required => true %>
+             <%= f.text_field :tag_list , class: "form-control", placeholder: "태그 ex) 이어섬, 아티스트" %>
+             <%= hidden_field_tag(:user_id, current_user.id) %>
         </div>
       </div>
       <div class="modal-footer">
-        <%= f.submit "제출" , class: "form-control" ,id:"register-id" %>
-<!--         <button type="button" class="btn btn-default", id:"register-id" data-dismiss="modal">Close</button>
- -->        <% end %>
-          <% end %>
+            <%= f.submit "제출" , class: "form-control" ,id:"register-id" %>
+<!--      <button type="button" class="btn btn-default", id:"register-id" data-dismiss="modal">Close</button>
+ -->      <% end %>
+        <% end %>
       </div>
     </div>
   </div>

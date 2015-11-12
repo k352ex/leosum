@@ -107,6 +107,7 @@ ActiveRecord::Schema.define(version: 20150921023063) do
 
   create_table "works", force: :cascade do |t|
     t.string   "title",      limit: 255
+    t.string   "file",       limit: 255
     t.text     "content",    limit: 65535
     t.integer  "user_id",    limit: 4
     t.datetime "created_at",               null: false
